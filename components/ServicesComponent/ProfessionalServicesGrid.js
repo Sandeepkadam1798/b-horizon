@@ -47,8 +47,8 @@ export default function ProfessionalServicesGrid() {
   const [hoveredIndex, setHoveredIndex] = useState(null);
 
   return (
-    <div className="bg-gradient-to-br from-gray-50 to-gray-100 min-h-screen">
-      <div className="max-w-7xl mx-auto px-4 py-16 sm:px-6 lg:px-8">
+    <div className="bg-gradient-to-br from-gray-50 to-gray-100 ">
+      <div className=" mx-auto px-4 py-16 sm:px-6 lg:px-8">
         <motion.div 
           className="text-center mb-16"
           initial={{ opacity: 0, y: -20 }}

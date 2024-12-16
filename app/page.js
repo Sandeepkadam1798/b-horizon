@@ -8,6 +8,10 @@ import Image from "next/image";
 import { MarketingProcess } from '@/components/MarketingProcess/MarketingProcess';
 import AboutSection from '@/components/AboutSection/AboutSection';
 import ProfessionalServicesGrid from '@/components/ServicesComponent/ProfessionalServicesGrid';
+import Whychooseus from '@/components/Whychooseus/Whychooseus';
+import AnimatedUIloader from '@/components/AnimatedUIloader/AnimatedUIloader';
+import Testimonials from '@/components/Testimonials/Testimonials';
+import Footer from '@/components/Footer/Footer';
 
 export default function Home() {
 
@@ -36,6 +40,10 @@ export default function Home() {
       <MarketingProcess/>
       <AboutSection/>
       <ProfessionalServicesGrid/>
+      <Whychooseus/>
+      <AnimatedUIloader/>
+      <Testimonials/>
+      <Footer/>
  </div>
   );
 }

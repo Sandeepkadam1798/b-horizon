@@ -1,0 +1,154 @@
+import Link from "next/link";
+import { Facebook, Instagram, Linkedin, Twitter } from 'lucide-react';
+
+function Footer() {
+  return (
+    <footer className="bg-[#f9fbfe] py-12 px-4 md:px-6 lg:px-8">
+      <div className="container mx-auto">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+          {/* Company Info */}
+          <div className="space-y-4">
+            <Link href="/" className="block">
+              <img
+                src="/placeholder.svg?height=80&width=150"
+                alt="STG Chennai IT Services"
+                className="h-20"
+              />
+            </Link>
+            <p className="text-gray-600 text-sm">
+              STG Chennai IT Services delivers end-to-end digital transformation solutions and
+              technology services, ranging from ideation to designing and from development to
+              deployment.
+            </p>
+            <div className="flex space-x-4">
+              <Link href="#" className="text-blue-600 hover:text-blue-700">
+                <Facebook className="h-5 w-5" />
+                <span className="sr-only">Facebook</span>
+              </Link>
+              <Link href="#" className="text-blue-600 hover:text-blue-700">
+                <Instagram className="h-5 w-5" />
+                <span className="sr-only">Instagram</span>
+              </Link>
+              <Link href="#" className="text-blue-600 hover:text-blue-700">
+                <Linkedin className="h-5 w-5" />
+                <span className="sr-only">LinkedIn</span>
+              </Link>
+              <Link href="#" className="text-blue-600 hover:text-blue-700">
+                <Twitter className="h-5 w-5" />
+                <span className="sr-only">Twitter</span>
+              </Link>
+            </div>
+          </div>
+
+          {/* First Useful Links Column */}
+          <div>
+            <h3 className="text-lg font-semibold text-blue-600 mb-4">Useful link</h3>
+            <ul className="space-y-2">
+              <li>
+                <Link href="#" className="text-gray-600 hover:text-blue-600">
+                  IT Consultancy
+                </Link>
+              </li>
+              <li>
+                <Link href="#" className="text-gray-600 hover:text-blue-600">
+                  Medical Coding Services
+                </Link>
+              </li>
+              <li>
+                <Link href="#" className="text-gray-600 hover:text-blue-600">
+                  Mobile App Development
+                </Link>
+              </li>
+              <li>
+                <Link href="#" className="text-gray-600 hover:text-blue-600">
+                  E-Commerce
+                </Link>
+              </li>
+              <li>
+                <Link href="#" className="text-gray-600 hover:text-blue-600">
+                  Enterprise Software Development
+                </Link>
+              </li>
+              <li>
+                <Link href="#" className="text-gray-600 hover:text-blue-600">
+                  Software Testing
+                </Link>
+              </li>
+            </ul>
+          </div>
+
+          {/* Second Useful Links Column */}
+          <div>
+            <h3 className="text-lg font-semibold text-blue-600 mb-4">Useful link</h3>
+            <ul className="space-y-2">
+              <li>
+                <Link href="#" className="text-gray-600 hover:text-blue-600">
+                  IT Consultancy
+                </Link>
+              </li>
+              <li>
+                <Link href="#" className="text-gray-600 hover:text-blue-600">
+                  Medical Coding Services
+                </Link>
+              </li>
+              <li>
+                <Link href="#" className="text-gray-600 hover:text-blue-600">
+                  Mobile App Development
+                </Link>
+              </li>
+              <li>
+                <Link href="#" className="text-gray-600 hover:text-blue-600">
+                  E-Commerce
+                </Link>
+              </li>
+              <li>
+                <Link href="#" className="text-gray-600 hover:text-blue-600">
+                  Enterprise Software Development
+                </Link>
+              </li>
+              <li>
+                <Link href="#" className="text-gray-600 hover:text-blue-600">
+                  Software Testing
+                </Link>
+              </li>
+            </ul>
+          </div>
+
+          {/* Contact Info */}
+          <div>
+            <h3 className="text-lg font-semibold text-blue-600 mb-4">Contact Us</h3>
+            <div className="space-y-4">
+              <div>
+                <p className="font-medium">STG CHENNAI IT SERVICES INDIA</p>
+                <address className="text-gray-600 not-italic">
+                  The Workvilla, Ground Floor,
+                  <br />
+                  No 306, Anna Salai,
+                  <br />
+                  Thousand Lights, Chennai-600006.
+                </address>
+              </div>
+              <div>
+                <Link href="mailto:info@stgmi.com" className="text-gray-600 hover:text-blue-600 block">
+                  info@stgmi.com
+                </Link>
+                <Link href="tel:+918035384274" className="text-gray-600 hover:text-blue-600 block">
+                  +918035384274
+                </Link>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        {/* Copyright */}
+        <div className="mt-12 pt-8 border-t border-gray-200">
+          <p className="text-center text-gray-600 text-sm">
+            Copyright © 2024 STG Chennai IT Services
+          </p>
+        </div>
+      </div>
+    </footer>
+  );
+}
+
+export default Footer;

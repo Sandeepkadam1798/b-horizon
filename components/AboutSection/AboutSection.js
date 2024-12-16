@@ -12,7 +12,7 @@ export default function AboutSection() {
   const processSteps = ["Planning", "Research", "Optimizing", "Results"];
 
   return (
-    <section className="container mx-auto px-4 py-16">
+    <section className=" mx-auto px-4 py-16">
       <div className="grid md:grid-cols-2 gap-1 items-center">
         {/* Left Column - Image */}
         <motion.div 

@@ -21,7 +21,7 @@ export function MarketingProcess() {
   ];
 
   return (
-    <div className="max-w-7xl mx-auto px-4 py-16 sm:px-6 lg:px-8">
+    <div className=" mx-auto px-4 py-16 sm:px-6 lg:px-8">
       <div className="text-center mb-16">
         <h2 className="text-sm font-semibold text-[#447ab1] tracking-wide uppercase">
           Our marketing process
