@@ -13,10 +13,10 @@ export default function AboutSection() {
 
   return (
     <section className=" mx-auto px-4 py-16">
-      <div className="grid md:grid-cols-2 gap-1 items-center">
+      <div className="grid md:grid-cols-2 gap-1 justify-center items-center">
         {/* Left Column - Image */}
         <motion.div 
-          className="relative overflow-hidden rounded-lg"
+          className="relative overflow-hidden rounded-lg p-8"
           initial={{ opacity: 0, x: -50 }}
           animate={{ opacity: 1, x: 0 }}
           transition={{ duration: 0.5 }}
@@ -55,7 +55,7 @@ export default function AboutSection() {
             animate={{ opacity: 1 }}
             transition={{ duration: 0.5, delay: 0.4 }}
           >
-             to the existing market with a revolutionary technological change.
+            {`STG Chennai It Services delivers end-to-end digital transformation solutions and technology services, ranging from ideation to designing and from development to deployment. Since a decade we have been serving the widest array of business niche. STG Chennai It Services is an agile studio that offers the most customized solutions across the digital value chain. We are highly proficient in Artificial Intelligence, Chatbots, Mobile Applications, AR/VR, IOT, Web Apps, Blockchain and more. Whether you are a start-up or well-established organization willing to up-scale your business with an enthralling business app, STG Chennai It Services is the right technology partner for you. We offer unmatched services capable of giving a cutthroat competition to the existing market with a revolutionary technological change.`}
           </motion.p>
 
           <motion.div 

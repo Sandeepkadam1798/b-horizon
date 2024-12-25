@@ -20,7 +20,7 @@ export default function Whychooseus() {
     </h2>
     <div className="border-l-4 border-blue-600 pl-6">
       <p className="text-gray-700 text-lg leading-relaxed max-w-4xl">
-        Custom software offers tailored solutions precisely aligned with your business needs, providing greater flexibility, scalability, and efficiency compared to off-the-shelf alternatives. By investing in custom software, businesses gain control over features, security, and integration, ensuring seamless alignment with organizational goals. This bespoke approach fosters innovation, streamlines processes, and ultimately drives competitive advantage in today's dynamic market landscape.
+        {`Custom software offers tailored solutions precisely aligned with your business needs, providing greater flexibility, scalability, and efficiency compared to off-the-shelf alternatives. By investing in custom software, businesses gain control over features, security, and integration, ensuring seamless alignment with organizational goals. This bespoke approach fosters innovation, streamlines processes, and ultimately drives competitive advantage in today's dynamic market landscape.`}
       </p>
     </div>
   </section>
