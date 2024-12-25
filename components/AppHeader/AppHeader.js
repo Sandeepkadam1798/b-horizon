@@ -11,7 +11,7 @@ const navItems = [
   { 
     label: 'Services', 
     href: '/services',
-    items: ['Software Testing', 'Web Development', 'Mobile Development', 'Cloud Services'] 
+    items: ['IT Application Development', 'AI, Machine Learning, and Data Science', 'Geospatial Development and GeoAI', 'Database Development and Custom Report Generation','IT-Enabled Services (ITES)'] 
   },
   { 
     label: 'Industries', 
@@ -23,7 +23,7 @@ const navItems = [
     href: '/technology',
     items: ['AI & ML', 'Cloud Computing', 'DevOps', 'Blockchain'] 
   },
-  { label: 'Contact Us', href: '/contact' }
+  { label: 'Contact Us', href: '/Contactus' }
 ]
 
 const AppHeader = () => {

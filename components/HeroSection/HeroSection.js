@@ -1,60 +1,117 @@
-import React from 'react'
-import Image from 'next/image'
-import { motion, AnimatePresence } from 'framer-motion'
+'use client'
 
-export function HeroSection({ active, title, description }) {
+import { useState, useEffect } from 'react'
+import { motion, AnimatePresence } from 'framer-motion'
+import Image from 'next/image'
+import { Button } from '@/components/ui/button'
+import  HeroImage from "../../public/Images/Hero.png"
+import  Aboutus from "../../public/Images/Aboutus.png"
+
+const heroContent = [
+  {
+    id: 1,
+    title: "ANALYTICAL REPORTING",
+    description: "Acquiring and utilising accurate information in the form of analytical data is fundamental to many. We at STG Chennai It Services give consistent reporting that incorporates analysis of various factors and performance based on the results.",
+    image: HeroImage,
+  },
+  {
+    id: 2,
+    title: "DATA INSIGHTS",
+    description: "Transform your raw data into actionable insights with our advanced analytics platform. Get deeper understanding of your business metrics and performance indicators.",
+    image: Aboutus,
+  },
+  {
+    id: 3,
+    title: "BUSINESS METRICS",
+    description: "Track and analyze key performance indicators with our comprehensive business metrics solutions. Make data-driven decisions with confidence.",
+    image: HeroImage,
+  }
+]
+
+export default function AnimatedHero() {
+  const [currentSlide, setCurrentSlide] = useState(0)
+
+  useEffect(() => {
+    const timer = setInterval(() => {
+      setCurrentSlide((prev) => (prev + 1) % heroContent.length)
+    }, 5000)
+    return () => clearInterval(timer)
+  }, [])
+
   return (
-    <section className="relative overflow-hidden min-h-screen bg-white">
-      <div className="absolute inset-0 bg-gradient-to-r from-cyan-50 via-blue-50 to-indigo-50" />
-      
-      <div className="container mx-auto px-4 py-20">
-        <div className="grid md:grid-cols-2 gap-12 items-center">
-          <div className="relative z-10">
-            <AnimatePresence mode="wait">
-              <motion.div
-                key={active}
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                exit={{ opacity: 0, y: -20 }}
-                transition={{ duration: 0.5 }}
-              >
-                <h1 className="text-5xl font-bold text-[#447ab1] mb-6">
-                  {title}
-                </h1>
-                <p className="text-gray-600 mb-8 text-lg">
-                  {description}
-                </p>
-              </motion.div>
-            </AnimatePresence>
-            <button className="bg-blue-600 text-white px-8 py-3 rounded-md hover:bg-blue-700 transition-colors">
+    <div className="relative mx-auto max-w-7xl px-4 py-20 sm:px-6 lg:px-8">
+    <div className="grid items-center gap-12 lg:grid-cols-2 lg:gap-8">
+      {/* Text Section */}
+      <div className="order-1 lg:order-1">
+        <AnimatePresence mode="wait">
+          <motion.div
+            key={currentSlide}
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            exit={{ opacity: 0, y: -20 }}
+            transition={{ duration: 0.5 }}
+            className="max-w-xl"
+          >
+            <h1 className="mb-6 text-2xl font-bold tracking-tight text-[#447ab1] sm:text-5xl md:text-6xl">
+              {heroContent[currentSlide].title}
+            </h1>
+            <p className="mb-8 text-lg text-gray-600">
+              {heroContent[currentSlide].description}
+            </p>
+            <Button 
+              size="lg"
+              className="bg-[#447ab1] hover:bg-blue-700"
+            >
               Contact Us
+            </Button>
+          </motion.div>
+        </AnimatePresence>
+  
+        <div className="mt-12 flex gap-4">
+          {heroContent.map((_, index) => (
+            <button
+              key={index}
+              onClick={() => setCurrentSlide(index)}
+              className={`text-xl font-semibold transition-colors duration-200 ${
+                currentSlide === index ? 'text-blue-600' : 'text-gray-400'
+              }`}
+              aria-label={`Show slide ${index + 1}`}
+            >
+              {String(index + 1).padStart(2, '0')}
             </button>
-            
-            <div className="flex items-center gap-4 mt-12">
-              {[0, 1, 2].map((index) => (
-                <React.Fragment key={index}>
-                  <span className={`text-2xl font-semibold ${active === index ? 'text-blue-600' : 'text-gray-400'}`}>
-                    0{index + 1}
-                  </span>
-                  {index < 2 && <div className={`h-0.5 w-12 ${active === index ? 'bg-blue-600' : 'bg-gray-300'}`} />}
-                </React.Fragment>
-              ))}
-            </div>
-          </div>
-          
-          <div className="relative">
-            <div className="absolute -right-40 top-1/2 -translate-y-1/2 w-[600px] h-[600px] rounded-full overflow-hidden">
-              <Image
-                src="/placeholder.svg"
-                alt="Team collaboration"
-                width={600}
-                height={600}
-                className="object-cover"
-              />
-            </div>
-          </div>
+          ))}
         </div>
       </div>
-    </section>
+  
+      {/* Image Section */}
+      <div className="relative order-2 lg:order-2">
+        <AnimatePresence mode="wait">
+          <motion.div
+            key={currentSlide}
+            initial={{ opacity: 0, x: 100 }}
+            animate={{ opacity: 1, x: 0 }}
+            exit={{ opacity: 0, x: -100 }}
+            transition={{ duration: 0.5 }}
+            className="relative"
+          >
+            <div style={{borderRadius : "25% 75% / 50%"}} className="relative h-[500px] overflow-hidden rounded-[48px] bg-white/50 backdrop-blur-sm shadow-xl">
+              <Image
+                src={heroContent[currentSlide].image}
+                alt={`Slide ${currentSlide + 1}`}
+                fill
+                className="object-fill"
+                priority
+                style={{borderRadius : "25% 75% / 50%"}}
+              />
+            </div>
+            {/* Decorative circle */}
+            <div className="absolute -bottom-4 -left-4 h-24 w-24 rounded-full bg-blue-100/50 backdrop-blur-sm" />
+            <div className="absolute -top-4 -right-4 h-16 w-16 rounded-full bg-purple-100/50 backdrop-blur-sm" />
+          </motion.div>
+        </AnimatePresence>
+      </div>
+    </div>
+  </div>
+  
   )
 }

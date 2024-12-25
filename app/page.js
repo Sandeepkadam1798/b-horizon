@@ -3,7 +3,7 @@
 import { useState, useEffect } from 'react'
 
 import AppHeader from "@/components/AppHeader/AppHeader";
-import { HeroSection } from "@/components/HeroSection/HeroSection";
+import  HeroSection  from "@/components/HeroSection/HeroSection";
 import Image from "next/image";
 import { MarketingProcess } from '@/components/MarketingProcess/MarketingProcess';
 import AboutSection from '@/components/AboutSection/AboutSection';
@@ -27,15 +27,15 @@ export default function Home() {
 
   return (
  <div>
-  <AppHeader/>
+  {/* <AppHeader/> */}
   <HeroSection
-        active={activeHero} 
-        title={['SOFTWARE ROBUSTNESS', 'INNOVATIVE SOLUTIONS', 'EXPERT CONSULTING'][activeHero]}
-        description={[
-          'We help companies to focus on core business by taking over complete responsibility. We provide both black-box and white-box testing support on demand.',
-          'Our cutting-edge solutions drive business growth and efficiency. We leverage the latest technologies to deliver unparalleled results.',
-          'With years of industry experience, our consultants provide strategic insights to help your business thrive in a competitive landscape.'
-        ][activeHero]}
+        // active={activeHero} 
+        // title={['SOFTWARE ROBUSTNESS', 'INNOVATIVE SOLUTIONS', 'EXPERT CONSULTING'][activeHero]}
+        // description={[
+        //   'We help companies to focus on core business by taking over complete responsibility. We provide both black-box and white-box testing support on demand.',
+        //   'Our cutting-edge solutions drive business growth and efficiency. We leverage the latest technologies to deliver unparalleled results.',
+        //   'With years of industry experience, our consultants provide strategic insights to help your business thrive in a competitive landscape.'
+        // ][activeHero]}
       />
       <MarketingProcess/>
       <AboutSection/>
@@ -43,7 +43,7 @@ export default function Home() {
       <Whychooseus/>
       <AnimatedUIloader/>
       <Testimonials/>
-      <Footer/>
+     
  </div>
   );
 }
