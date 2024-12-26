@@ -153,7 +153,7 @@ const navItems = [
     label: 'Services', 
     href: '/services',
     items: [
-      { label: 'IT Application Development', href: '/services/it-application-development' },
+      { label: 'IT Application Development', href: '/Services/ITApplicationDevelopment' },
       { label: 'AI, Machine Learning, and Data Science', href: '/services/ai-machine-learning' },
       { label: 'Geospatial Development and GeoAI', href: '/services/geospatial-development' },
       { label: 'Database Development and Custom Report Generation', href: '/services/database-development' },
