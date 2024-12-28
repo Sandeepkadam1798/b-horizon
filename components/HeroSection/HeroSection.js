@@ -11,7 +11,7 @@ const heroContent = [
   {
     id: 1,
     title: "ANALYTICAL REPORTING",
-    description: "Acquiring and utilising accurate information in the form of analytical data is fundamental to many. We at STG Chennai It Services give consistent reporting that incorporates analysis of various factors and performance based on the results.",
+    description: "Acquiring and utilising accurate information in the form of analytical data is fundamental to many. We at Beyond Horizon It Services give consistent reporting that incorporates analysis of various factors and performance based on the results.",
     image: HeroImage,
   },
   {

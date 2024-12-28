@@ -198,7 +198,7 @@ const AppHeader = () => {
           <Link href="/" className="flex items-center">
             <Image
               src="/placeholder.svg"
-              alt="STG CHENNAI IT SERVICES"
+              alt="Beyond Horizon IT SERVICES"
               width={124}
               height={48}
               className="h-12 w-auto"

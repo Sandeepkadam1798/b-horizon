@@ -7,7 +7,7 @@ const testimonials = [
     name: "Raju",
     position: "Senior Engineer",
     message:
-      "We are very satisfied and happy to have found STG Chennai IT Services as our development partner. They are true professionals.",
+      "We are very satisfied and happy to have found Beyond Horizon IT Services as our development partner. They are true professionals.",
   },
   {
     name: "Rohith",

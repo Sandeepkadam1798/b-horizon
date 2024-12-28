@@ -11,12 +11,12 @@ function Footer() {
             <Link href="/" className="block">
               <img
                 src="/placeholder.svg?height=80&width=150"
-                alt="STG Chennai IT Services"
+                alt="Beyond Horizon"
                 className="h-20"
               />
             </Link>
             <p className="text-gray-600 text-sm">
-              STG Chennai IT Services delivers end-to-end digital transformation solutions and
+            Beyond Horizon IT Services delivers end-to-end digital transformation solutions and
               technology services, ranging from ideation to designing and from development to
               deployment.
             </p>
@@ -119,7 +119,7 @@ function Footer() {
             <h3 className="text-lg font-semibold text-blue-600 mb-4">Contact Us</h3>
             <div className="space-y-4">
               <div>
-                <p className="font-medium">STG CHENNAI IT SERVICES INDIA</p>
+                <p className="font-medium">Beyond Horizon IT SERVICES INDIA</p>
                 <address className="text-gray-600 not-italic">
                   The Workvilla, Ground Floor,
                   <br />
@@ -129,8 +129,8 @@ function Footer() {
                 </address>
               </div>
               <div>
-                <Link href="mailto:info@stgmi.com" className="text-gray-600 hover:text-blue-600 block">
-                  info@stgmi.com
+                <Link href="mailto:info@Beyond-Horizon.com" className="text-gray-600 hover:text-blue-600 block">
+                  info@Beyond-Horizon.com
                 </Link>
                 <Link href="tel:+918035384274" className="text-gray-600 hover:text-blue-600 block">
                   +918035384274
@@ -143,7 +143,7 @@ function Footer() {
         {/* Copyright */}
         <div className="mt-12 pt-8 border-t border-gray-200">
           <p className="text-center text-gray-600 text-sm">
-            Copyright © 2024 STG Chennai IT Services
+            Copyright © 2024 Beyond Horizon IT Services
           </p>
         </div>
       </div>
