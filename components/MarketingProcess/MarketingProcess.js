@@ -1,6 +1,18 @@
-import React from 'react';
+'use client'
+import React, { useEffect } from 'react';
+import AOS from "aos";
+import "aos/dist/aos.css";
+
+
 
 export function MarketingProcess() {
+
+
+  useEffect(() => {
+    AOS.init();
+  }, []);
+
+
   const steps = [
     {
       title: "Ideate",
@@ -21,7 +33,7 @@ export function MarketingProcess() {
   ];
 
   return (
-    <div className=" mx-auto px-4 py-16 sm:px-6 lg:px-8">
+    <div className=" mx-auto px-4 py-16 sm:px-6 lg:px-8 "data-aos="fade-up" data-aos-duration="2000" >
       <div className="text-center mb-16">
         <h2 className="text-sm font-semibold text-[#447ab1] tracking-wide uppercase">
           Our marketing process

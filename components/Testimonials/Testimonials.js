@@ -1,140 +1,118 @@
-import { useState, useEffect } from "react";
-import { motion, AnimatePresence } from "framer-motion";
-import { ChevronLeft, ChevronRight } from "lucide-react";
+'use client'
+import { useEffect, useState } from "react";
+import { ChevronLeft, ChevronRight, } from 'lucide-react';
+import Aboutus from "@/public/Images/Aboutus.png"
+import Image from "next/image";
+import AOS from "aos";
+import "aos/dist/aos.css";
 
 const testimonials = [
   {
-    name: "Raju",
-    position: "Senior Engineer",
+    name: "Julian Clarke",
+    position: "CEO, Versafit",
     message:
-      "We are very satisfied and happy to have found Beyond Horizon IT Services as our development partner. They are true professionals.",
+      "They manifested our concepts, and were quite responsive. I could easily say it is one of the most trouble-free implementations I have encountered.",
+    image: Aboutus
   },
   {
-    name: "Rohith",
-    position: "Designer",
+    name: "Emily Smith",
+    position: "Product Manager, TechCorp",
     message:
-      "I am very impressed by the quality of the team working on our project and the team displays a real understanding of our issues.",
+      "The team was exceptional in delivering exactly what we needed, on time, and within budget.",
+    image: Aboutus
   },
   {
-    name: "Anjali",
-    position: "Project Manager",
+    name: "John Doe",
+    position: "CTO, StartUp Hub",
     message:
-      "The team was extremely helpful and professional throughout the entire project timeline.",
-  },
-  {
-    name: "Vikram",
-    position: "CEO",
-    message:
-      "Outstanding work by the team. They truly delivered beyond expectations and ensured our goals were met.",
+      "Beyond impressed by their dedication and attention to detail. They are a great partner for any tech project.",
+    image: Aboutus
   },
 ];
 
 export default function Testimonials() {
-  const [current, setCurrent] = useState(0);
 
-  const totalPairs = Math.ceil(testimonials.length / 2);
-
-  // Auto slide every 5 seconds
   useEffect(() => {
-    const interval = setInterval(() => {
-      setCurrent((prev) => (prev + 1) % totalPairs);
-    }, 5000);
-    return () => clearInterval(interval);
-  }, [totalPairs]);
+    AOS.init();
+  }, []);
 
-  const nextPair = () => {
-    setCurrent((prev) => (prev + 1) % totalPairs);
+
+  const [currentIndex, setCurrentIndex] = useState(0);
+
+  const nextTestimonial = () => {
+    setCurrentIndex((prev) => (prev + 1) % testimonials.length);
   };
 
-  const prevPair = () => {
-    setCurrent((prev) => (prev - 1 + totalPairs) % totalPairs);
-  };
-
-  const getCurrentPair = () => {
-    const start = current * 2;
-    return testimonials.slice(start, start + 2);
+  const prevTestimonial = () => {
+    setCurrentIndex((prev) =>
+      prev === 0 ? testimonials.length - 1 : prev - 1
+    );
   };
 
   return (
-    <div className="w-full bg-white py-12 px-4 flex flex-col items-center overflow-hidden">
-      {/* Title */}
-      <h2 className="text-3xl md:text-4xl font-bold text-blue-600 mb-8">
-        Testimonials
-      </h2>
+    <div data-aos="fade-up" data-aos-duration="2000"  className="relative bg-dot-pattern min-h-[400px] py-16 px-4">
+      <div className="max-w-4xl mx-auto text-center">
+        <h2 className="text-3xl font-bold text-gray-800 mb-12">
+          Client <span className="relative">
+            Testimonials
+            <span className="absolute bottom-0 left-0 w-full h-0.5 bg-[#447ab1]"></span>
+          </span>
+        </h2>
 
-      {/* Testimonial Container */}
-      <div className="relative w-full lg:w-3/4 flex items-center justify-between">
-        {/* Left Button - Positioned Outside */}
-        <button
-          onClick={prevPair}
-          className="absolute -left-12 top-1/2 transform -translate-y-1/2 bg-blue-100 rounded-full p-3 hover:bg-blue-200 transition"
-        >
-          <ChevronLeft size={24} />
-        </button>
+        <div className="relative mt-8">
+          <button
+            onClick={prevTestimonial}
+            className="absolute -left-4 top-1/2 transform -translate-y-1/2 bg-white hover:bg-gray-50 text-gray-700 rounded-full p-2 shadow-lg transition-all"
+            aria-label="Previous testimonial"
+          >
+            <ChevronLeft size={24} />
+          </button>
+          
+          <div className="mx-16">
+            <p className="text-gray-700 text-lg italic mb-12 leading-relaxed">
+              "{testimonials[currentIndex].message}"
+            </p>
+            
+            <div className="flex flex-col items-center justify-center">
+              <Image
+                src={testimonials[currentIndex].image}
+                alt=""
+                className="w-20 h-20 rounded-full border-2 border-gray-200 mb-4"
+              />
+              <p className="text-gray-800 font-semibold text-lg">
+                {testimonials[currentIndex].name}
+              </p>
+              <p className="text-gray-500">
+                {testimonials[currentIndex].position}
+              </p>
+            </div>
+          </div>
 
-        {/* Testimonial Cards */}
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 w-full">
-          <AnimatePresence mode="wait">
-            {getCurrentPair().map((testimonial, index) => (
-              <motion.div
-                key={index}
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                exit={{ opacity: 0, y: -20 }}
-                transition={{ duration: 0.5 }}
-                className="bg-white shadow-lg rounded-lg p-6 relative text-center"
-              >
-                {/* Quote */}
-                <blockquote className="text-gray-600 italic mb-4">
-                  <span className="text-blue-400 text-4xl leading-none mr-1">
-                    “
-                  </span>
-                  {testimonial.message}
-                  <span className="text-blue-400 text-4xl leading-none ml-1">
-                    ”
-                  </span>
-                </blockquote>
-
-                {/* User Details */}
-                <div className="flex items-center justify-center mt-4">
-                  <div className="w-14 h-14 bg-gray-300 rounded-full flex items-center justify-center mr-3">
-                    <div className="text-gray-400 text-2xl">👤</div>
-                  </div>
-                  <div>
-                    <p className="text-blue-600 font-semibold text-lg">
-                      {testimonial.name}
-                    </p>
-                    <p className="text-gray-500 text-sm">
-                      {testimonial.position}
-                    </p>
-                  </div>
-                </div>
-              </motion.div>
-            ))}
-          </AnimatePresence>
+          <button
+            onClick={nextTestimonial}
+            className="absolute -right-4 top-1/2 transform -translate-y-1/2 bg-white hover:bg-gray-50 text-gray-700 rounded-full p-2 shadow-lg transition-all"
+            aria-label="Next testimonial"
+          >
+            <ChevronRight size={24} />
+          </button>
         </div>
 
-        {/* Right Button - Positioned Outside */}
-        <button
-          onClick={nextPair}
-          className="absolute -right-12 top-1/2 transform -translate-y-1/2 bg-blue-100 rounded-full p-3 hover:bg-blue-200 transition"
-        >
-          <ChevronRight size={24} />
-        </button>
-      </div>
-
-      {/* Dots Indicator */}
-      <div className="flex mt-8 gap-2">
-        {Array.from({ length: totalPairs }).map((_, index) => (
-          <div
-            key={index}
-            onClick={() => setCurrent(index)}
-            className={`w-3 h-3 rounded-full cursor-pointer ${
-              current === index ? "bg-blue-600" : "bg-gray-300"
-            }`}
-          ></div>
-        ))}
+        <div className="flex justify-center gap-2 mt-8">
+          {testimonials.map((_, index) => (
+            <button
+              key={index}
+              onClick={() => setCurrentIndex(index)}
+              className={`w-2 h-2 rounded-full transition-all ${
+                currentIndex === index
+                  ? "bg-[#447ab1] w-4"
+                  : "bg-gray-300 hover:bg-gray-400"
+              }`}
+              aria-label={`Go to testimonial ${index + 1}`}
+            />
+          ))}
+        </div>
       </div>
     </div>
   );
 }
+

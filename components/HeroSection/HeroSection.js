@@ -39,7 +39,7 @@ export default function AnimatedHero() {
   }, [])
 
   return (
-    <div className="relative mx-auto max-w-7xl px-4 py-20 sm:px-6 lg:px-8">
+    <div className="relative mx-auto max-w-7xl px-4 py-20 sm:px-6 lg:px-8 overflow-hidden">
     <div className="grid items-center gap-12 lg:grid-cols-2 lg:gap-8">
       {/* Text Section */}
       <div className="order-1 lg:order-1">

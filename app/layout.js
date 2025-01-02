@@ -4,6 +4,7 @@ import "./globals.css";
 import { Providers } from "./Provider";
 import AppHeader from "@/components/AppHeader/AppHeader";
 import Footer from "@/components/Footer/Footer";
+import SpeedDials from "@/components/SpeedDials/SpeedDials";
 
 const inter = Poppins({ subsets: ["latin"] ,weight: ['100','300','400','500','700','900']});
 
@@ -31,6 +32,9 @@ export default function RootLayout({ children }) {
       >
          <Providers>
          <AppHeader/>
+         <div className="fixed bottom-8 right-8 z-50">
+          <SpeedDials />
+        </div>
          {children}
          <Footer/>
          </Providers>

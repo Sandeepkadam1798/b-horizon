@@ -160,26 +160,8 @@ const navItems = [
       { label: 'IT-Enabled Services (ITES)', href: '/services/it-enabled-services' }
     ] 
   },
-  { 
-    label: 'Industries', 
-    href: '/industries',
-    items: [
-      { label: 'Healthcare', href: '/Industries/Healthcare' },
-      { label: 'Finance', href: '/industries/finance' },
-      { label: 'Education', href: '/industries/education' },
-      { label: 'Retail', href: '/industries/retail' }
-    ] 
-  },
-  { 
-    label: 'Technology', 
-    href: '/technology',
-    items: [
-      { label: 'AI & ML', href: '/technology/ai-ml' },
-      { label: 'Cloud Computing', href: '/technology/cloud-computing' },
-      { label: 'DevOps', href: '/technology/devops' },
-      { label: 'Blockchain', href: '/technology/blockchain' }
-    ] 
-  },
+ 
+
   { label: 'Contact Us', href: '/Contactus' }
 ]
 
@@ -293,3 +275,4 @@ const AppHeader = () => {
 }
 
 export default AppHeader
+

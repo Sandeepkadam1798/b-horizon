@@ -38,8 +38,9 @@ export default function Home() {
         // ][activeHero]}
       />
       <MarketingProcess/>
-      <AboutSection/>
+      
       <ProfessionalServicesGrid/>
+      <AboutSection/>
       <Whychooseus/>
       <AnimatedUIloader/>
       <Testimonials/>

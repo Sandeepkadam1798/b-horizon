@@ -1,114 +1,49 @@
 "use client";
 
-import { useState } from "react";
 import Image from "next/image";
-import { Check } from "lucide-react";
-import { motion } from "framer-motion";
-import Aboutus from "../../public/Images/Aboutus.png"
+import Aboutus from "../../public/Images/Aboutus.png";
 
 export default function AboutSection() {
-  const [isHovered, setIsHovered] = useState(false);
-
-  const processSteps = ["Planning", "Research", "Optimizing", "Results"];
-
   return (
-    <section className=" mx-auto px-4 py-16">
-      <div className="grid md:grid-cols-2 gap-1 justify-center items-center">
-        {/* Left Column - Image */}
-        <motion.div 
-          className="relative overflow-hidden rounded-lg p-8"
-          initial={{ opacity: 0, x: -50 }}
-          animate={{ opacity: 1, x: 0 }}
-          transition={{ duration: 0.5 }}
-        >
-          <motion.div
-            whileHover={{ scale: 1.05 }}
-            transition={{ duration: 0.3 }}
-          >
-            <Image
-              src={Aboutus}
-              alt="Professional IT consultant"
-              width={400}
-              height={600}
-              className="rounded-lg object-cover"
-            />
-          </motion.div>
-        </motion.div>
+    <div className="bg-gradient-to-b from-gray-50 to-white py-16 px-6 lg:px-20">
+      <div className="max-w-7xl mx-auto flex flex-col lg:flex-row items-center gap-10">
+        {/* Left Section - Image */}
+        <div className="relative w-full lg:w-1/2 flex justify-center">
+          <div className="absolute w-96 h-96 bg-blue-100 rounded-full -left-10 -top-10"></div>
+          <Image
+            src={Aboutus}
+            alt="Person"
+            width={400}
+            height={450}
+            className="relative z-10 rounded-lg shadow-2xl"
+          />
+        </div>
 
-        {/* Right Column - Content */}
-        <motion.div 
-          className="space-y-6"
-          initial={{ opacity: 0, y: 50 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.5, delay: 0.2 }}
-        >
-          <motion.h1 
-            className="text-4xl font-bold"
-            style={{ color: "#447ab1" }}
-          >
-            About us
-          </motion.h1>
-          
-          <motion.p 
-            className="text-gray-700 leading-relaxed"
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            transition={{ duration: 0.5, delay: 0.4 }}
-          >
-            {`Beyond Horizon It Services delivers end-to-end digital transformation solutions and technology services, ranging from ideation to designing and from development to deployment. Since a decade we have been serving the widest array of business niche. Beyond Horizon It Services is an agile studio that offers the most customized solutions across the digital value chain. We are highly proficient in Artificial Intelligence, Chatbots, Mobile Applications, AR/VR, IOT, Web Apps, Blockchain and more. Whether you are a start-up or well-established organization willing to up-scale your business with an enthralling business app, Beyond Horizon It Services is the right technology partner for you. We offer unmatched services capable of giving a cutthroat competition to the existing market with a revolutionary technological change.`}
-          </motion.p>
-
-          <motion.div 
-            className="space-y-4"
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            transition={{ duration: 0.5, delay: 0.6 }}
-          >
-            <h2 className="text-xl font-semibold text-gray-800">
-              We divide our working process into 4 ways
-            </h2>
-            
-            <div className="grid grid-cols-2 gap-4">
-              {processSteps.map((item, index) => (
-                <motion.div 
-                  key={item} 
-                  className="flex items-center gap-2"
-                  initial={{ opacity: 0, y: 20 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.3, delay: 0.1 * index }}
-                >
-                  <motion.div 
-                    className="flex-shrink-0 w-5 h-5 rounded-full bg-[#447ab1] flex items-center justify-center"
-                    whileHover={{ scale: 1.2 }}
-                    transition={{ type: "spring", stiffness: 400, damping: 10 }}
-                  >
-                    <Check className="w-3 h-3 text-white" />
-                  </motion.div>
-                  <span className="text-gray-700">{item}</span>
-                </motion.div>
-              ))}
-            </div>
-          </motion.div>
-
-          <motion.button 
-            className="px-6 py-2 rounded text-white transition-all duration-300 ease-in-out"
-            style={{ backgroundColor: "#447ab1" }}
-            whileHover={{ scale: 1.05, backgroundColor: "#3a699f" }}
-            whileTap={{ scale: 0.95 }}
-            onHoverStart={() => setIsHovered(true)}
-            onHoverEnd={() => setIsHovered(false)}
-          >
-            View more info
-            <motion.span
-              className="inline-block ml-2"
-              animate={{ x: isHovered ? 5 : 0 }}
-              transition={{ type: "spring", stiffness: 400, damping: 10 }}
-            >
-              →
-            </motion.span>
-          </motion.button>
-        </motion.div>
+        {/* Right Section - Text */}
+        <div className="w-full lg:w-1/2 text-center lg:text-left">
+          <h1 className="text-4xl font-bold text-[#447ab1] mb-4">
+            About Us
+          </h1>
+          <div className="w-20 h-1 bg-[#447ab1] mx-auto lg:mx-0 mb-6"></div>
+          <p className="text-gray-700 leading-relaxed mb-6">
+           {`Beyond Horizon Technology Solutions is an Emirati-founded company committed to delivering cutting-edge, reliable, and scalable technology solutions. Our mission is to empower businesses with innovative tools and strategies, driving growth and fostering sustainable digital transformation. With a highly skilled and diverse team, we deliver impactful solutions tailored to the unique needs of our clients across multiple industries.`}
+          </p>
+         
+          <div className="mt-8">
+            <h3 className="text-2xl font-semibold text-[#447ab1] mb-4">Vision</h3>
+            <p className="text-gray-600 leading-relaxed mb-6">
+             {`To lead the industry in delivering innovative technology solutions that empower businesses to achieve their full potential in the digital era.`}
+            </p>
+            <h3 className="text-2xl font-semibold text-[#447ab1] mb-4">Our Mission</h3>
+            <p className="text-gray-600 leading-relaxed">
+             {`To transform challenges into opportunities through creativity, technical expertise, and collaboration, ensuring scalable and secure solutions for our clients.`}
+            </p>
+          </div>
+          {/* <button className="mt-8 px-6 py-3 bg-[#447ab1] text-white text-sm font-medium rounded-lg shadow-lg hover:bg-blue-700">
+            Learn More
+          </button> */}
+        </div>
       </div>
-    </section>
+    </div>
   );
 }
