@@ -4,10 +4,12 @@ import { ChevronRight } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
 import AboutusHero from "../../public/Images/AboutusHero.jpg"
-
+import wave from "@/public/Images/wave.webp";
 
 const page = () => {
   return (
+
+    <>
     <div>
          <div className="relative h-96 bg-black overflow-hidden">
       {/* Background Image */}
@@ -45,6 +47,9 @@ const page = () => {
     </div>
         
         <AboutSection/></div>
+    <Image src={wave} alt='wave' className='w-full relative -z-1 mt-5'/>
+    </>
+    
   )
 }
 

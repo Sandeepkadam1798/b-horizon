@@ -2,20 +2,28 @@
 
 import Image from "next/image";
 import Aboutus from "../../public/Images/Aboutus.png";
+import Hero1 from "../../public/Images/Hero1.png";
+import round from "@/public/Images/round.png";
 
 export default function AboutSection() {
   return (
-    <div className="bg-gradient-to-b from-gray-50 to-white py-16 px-6 lg:px-20">
+    <div className=" relative from-gray-50 to-white py-16 px-6 lg:px-20">
+     {/* bg-gradient-to-b */}
       <div className="max-w-7xl mx-auto flex flex-col lg:flex-row items-center gap-10">
         {/* Left Section - Image */}
         <div className="relative w-full lg:w-1/2 flex justify-center">
-          <div className="absolute w-96 h-96 bg-blue-100 rounded-full -left-10 -top-10"></div>
+          {/* <div className="absolute w-96 h-96 bg-blue-100 rounded-full -left-10 -top-10"></div> */}
           <Image
-            src={Aboutus}
+          src={round}
+          alt="Person"
+          className="absolute  w-[650px]  z-0 animate-spin-slow -left-28 -top-20"
+        />
+          <Image
+            src={Hero1}
             alt="Person"
-            width={400}
-            height={450}
-            className="relative z-10 rounded-lg shadow-2xl"
+            width={450}
+            // height={400}
+            className="relative z-10 "
           />
         </div>
 

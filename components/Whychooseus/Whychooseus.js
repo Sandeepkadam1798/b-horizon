@@ -4,6 +4,8 @@ import { motion } from "framer-motion"
 import { Check } from 'lucide-react'
 import Aboutus from "../../public/Images/Aboutus.png"
 import Image from "next/image"
+import wave from "@/public/Images/wave.webp";
+
 
 export default function Whychooseus() {
   const features = [
@@ -14,6 +16,9 @@ export default function Whychooseus() {
   ]
 
   return (
+    <>
+    
+    <Image src={wave} alt='wave' className='w-full relative -z-1 mt-5'/>
     <section className="max-w-7xl mx-auto px-4 py-16 sm:px-6 lg:px-8">
     <h2 className="text-4xl md:text-5xl lg:text-3xl font-bold mb-8">
       <span className="text-blue-600">Why</span> Choose Us?
@@ -24,6 +29,8 @@ export default function Whychooseus() {
       </p>
     </div>
   </section>
+    </>
+   
 
   )
 }

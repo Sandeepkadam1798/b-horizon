@@ -12,6 +12,7 @@ import Whychooseus from '@/components/Whychooseus/Whychooseus';
 import AnimatedUIloader from '@/components/AnimatedUIloader/AnimatedUIloader';
 import Testimonials from '@/components/Testimonials/Testimonials';
 import Footer from '@/components/Footer/Footer';
+import OurValue from '@/components/OurValue/OurValue';
 
 export default function Home() {
 
@@ -37,9 +38,11 @@ export default function Home() {
         //   'With years of industry experience, our consultants provide strategic insights to help your business thrive in a competitive landscape.'
         // ][activeHero]}
       />
-      <MarketingProcess/>
+      {/* <MarketingProcess/> */}
       
       <ProfessionalServicesGrid/>
+      <OurValue/>
+      <MarketingProcess/>
       <AboutSection/>
       <Whychooseus/>
       <AnimatedUIloader/>
