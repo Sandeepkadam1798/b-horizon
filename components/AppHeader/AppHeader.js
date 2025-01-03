@@ -178,13 +178,14 @@ const AppHeader = () => {
       <nav className="container mx-auto px-6 py-4">
         <div className="flex items-center justify-between">
           <Link href="/" className="flex items-center">
-            <Image
+            {/* <Image
               src="/placeholder.svg"
               alt="Beyond Horizon IT SERVICES"
               width={124}
               height={48}
               className="h-12 w-auto"
-            />
+            /> */}
+            <h2 className='text-xl font-semibold text-blue-600'>Beyond Horizon</h2>
           </Link>
 
           {/* Mobile Menu Toggle */}

@@ -1,8 +1,14 @@
 import Link from "next/link";
 import { Facebook, Instagram, Linkedin, Twitter } from 'lucide-react';
-
+import wave from "@/public/Images/wave.webp";
+import Image from "next/image";
 function Footer() {
   return (
+
+
+    <>
+    <Image src={wave} alt='wave' className='w-full relative -z-1 mt-5'/>
+
     <footer className="bg-[#f9fbfe] py-12 px-4 md:px-6 lg:px-8">
       <div className="container mx-auto">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
@@ -148,6 +154,8 @@ function Footer() {
         </div>
       </div>
     </footer>
+    </>
+
   );
 }
 

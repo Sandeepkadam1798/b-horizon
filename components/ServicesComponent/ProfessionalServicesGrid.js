@@ -253,7 +253,7 @@ export default function ProfessionalServicesGrid() {
           data-aos-delay="400"
           className="text-base leading-relaxed text-gray-600"
         >
-          From software development and digital transformation to consulting and support, we empower organizations to thrive in the digital era and achieve their strategic objectives.
+          {`From software development and digital transformation to consulting and support, we empower organizations to thrive in the digital era and achieve their strategic objectives.`}
         </p>
         <div className="grid md:grid-cols-2 gap-4 mt-4">
           {services.map((service, index) => (

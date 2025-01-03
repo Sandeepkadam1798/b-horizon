@@ -1,8 +1,25 @@
+'use client'
 import { Lightbulb, Code, TrendingUp } from 'lucide-react'
+import wave from "@/public/Images/wave.webp";
+import Image from 'next/image';
+import AOS from "aos";
+import "aos/dist/aos.css";
+import { useEffect } from 'react';
 
 export default function WhyYouNeedUs() {
+
+
+
+    useEffect(() => {
+      AOS.init();
+    }, []);
+
   return (
-    <div className="min-h-screen bg-gradient-to-b from-gray-50 to-white">
+    <>
+    
+    <div className="min-h-screen bg-gradient-to-b from-gray-50 to-white" data-aos="fade-up"
+          data-aos-duration="900"
+          data-aos-delay="200" >
       <div className="container mx-auto px-4 py-16 sm:px-6 lg:px-8">
         <header className="text-center mb-16">
           {/* <h1 className="text-4xl font-extrabold tracking-tight text-gray-900 sm:text-5xl md:text-6xl">
@@ -47,6 +64,9 @@ export default function WhyYouNeedUs() {
         </div> */}
       </div>
     </div>
+    <Image src={wave} alt='wave' className='w-full relative -z-1 mt-5'/>
+    </>
+ 
   )
 }
 

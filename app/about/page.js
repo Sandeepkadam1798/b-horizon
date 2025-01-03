@@ -47,7 +47,7 @@ const page = () => {
     </div>
         
         <AboutSection/></div>
-    <Image src={wave} alt='wave' className='w-full relative -z-1 mt-5'/>
+    {/* <Image src={wave} alt='wave' className='w-full relative -z-1 mt-5'/> */}
     </>
     
   )

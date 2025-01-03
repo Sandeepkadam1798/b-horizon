@@ -1,33 +1,66 @@
-import { TrendingUp, Rocket, Network, PiggyBank, ArrowRight, BarChart } from 'lucide-react'
-import { Card } from "@/components/ui/card"
+'use client'
+import {
+  TrendingUp,
+  Rocket,
+  Network,
+  PiggyBank,
+  ArrowRight,
+  BarChart,
+} from "lucide-react";
+import { Card } from "@/components/ui/card";
+import Service1BusinessImpactROI from "@/public/Images/Service1BusinessImpactROI.png";
+import Image from "next/image";
+import AOS from "aos";
+import "aos/dist/aos.css"; 
+import { useEffect } from "react";
 
 export default function BusinessImpact() {
+
+    useEffect(() => {
+      AOS.init();
+    }, []);
+
+
+
   return (
-    <div className="min-h-screen bg-gradient-to-b from-[#447ab1]/10 to-white">
+    <div className="min-h-screen ">
       <div className="container mx-auto px-4 py-16 sm:px-6 lg:px-8">
         {/* Hero Section */}
-        <div className="relative mb-20">
-          <div className="absolute inset-x-0 top-0 h-96 bg-[#447ab1]/5 -z-10 rounded-[3rem]" />
-         
-         
-         
-          <header className="text-center mb-16">
-          {/* <h1 className="text-4xl font-extrabold tracking-tight text-gray-900 sm:text-5xl md:text-6xl">
-            Why You Need Us
-          </h1> */}
+        <div className="relative ">
+  {/* Background Decoration */}
+  <div className="absolute inset-x-0 top-0 h-96 bg-[#447ab1]/5 -z-10 rounded-[3rem]" />
 
-          <h2 className="text-3xl font-bold text-center mt-10">
-    {/* Our Approach <span className="border-b-4 border-[#447ab1] pb-1">(How We Do It)</span> */}
-    Business Impact and ROI
-      </h2>
+  {/* Header Section */}
+  < header  data-aos="fade-left"
+          data-aos-duration="900"
+          data-aos-delay="200" className="text-center mb-16">
+    <h2 className="text-3xl font-bold text-center mt-10">
+      Business Impact and ROI
+    </h2>
 
-          <p className="mt-4 max-w-3xl mx-auto text-xl text-gray-500">
-           {` Transform your business operations and achieve measurable results with our innovative solutions`}
-          </p>
-        </header>
+    <p className="mt-4 max-w-3xl mx-auto text-xl text-gray-500">
+     {` Transform your business operations and achieve measurable results with our innovative solutions.`}
+    </p>
+  </header>
+
+  {/* Responsive Image */}
+  <div className="flex justify-center -mt-16" data-aos="fade-right"
+          data-aos-duration="900"
+          data-aos-delay="200" >
+    <Image
+      src={Service1BusinessImpactROI}
+      alt="Service1BusinessImpactROI"
+      className="rounded-lg "
+      width={800} // Adjust to a maximum desired width
+      height={450} // Maintain aspect ratio
+      layout="intrinsic" // Use intrinsic for automatic responsiveness
+      priority // Prioritize loading this image
+    />
+  </div>
+</div>
 
 
-          {/* <div className="text-center max-w-3xl mx-auto pt-16 pb-8">
+        {/* <div className="text-center max-w-3xl mx-auto pt-16 pb-8">
             <h1 className="text-4xl font-extrabold tracking-tight text-[#447ab1] sm:text-5xl md:text-6xl mb-6">
               Business Impact and ROI
             </h1>
@@ -35,19 +68,18 @@ export default function BusinessImpact() {
               Transform your business operations and achieve measurable results with our innovative solutions
             </p>
           </div> */}
-          
-          {/* Key Metrics */}
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mt-12">
+
+        {/* Key Metrics */}
+        {/* <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mt-12">
             <MetricCard number="40%" label="Efficiency Increase" />
             <MetricCard number="60%" label="Faster Delivery" />
             <MetricCard number="85%" label="System Integration" />
             <MetricCard number="45%" label="Cost Reduction" />
-          </div>
-        </div>
+          </div> */}
 
         {/* Main Benefits Section */}
-        <div className="space-y-20">
-          {/* Operational Efficiency */}
+        {/* <div className="space-y-20">
+         
           <BenefitSection
             icon={<TrendingUp className="h-8 w-8 text-[#447ab1]" />}
             title="Increased Operational Efficiency"
@@ -61,7 +93,7 @@ export default function BusinessImpact() {
             imageAlt="Operational Efficiency Visualization"
           />
 
-          {/* Time to Market */}
+          
           <BenefitSection
             icon={<Rocket className="h-8 w-8 text-[#447ab1]" />}
             title="Reduced Time-to-Market"
@@ -76,7 +108,7 @@ export default function BusinessImpact() {
             reversed
           />
 
-          {/* System Integration */}
+         
           <BenefitSection
             icon={<Network className="h-8 w-8 text-[#447ab1]" />}
             title="Improved System Integration"
@@ -90,7 +122,6 @@ export default function BusinessImpact() {
             imageAlt="System Integration Visualization"
           />
 
-          {/* Cost Savings */}
           <BenefitSection
             icon={<PiggyBank className="h-8 w-8 text-[#447ab1]" />}
             title="Long-term Cost Savings"
@@ -104,13 +135,20 @@ export default function BusinessImpact() {
             imageAlt="Cost Savings Visualization"
             reversed
           />
-        </div>
+        </div> */}
 
         {/* CTA Section */}
-        <div className="mt-20 text-center bg-[#447ab1] text-white py-16 px-4 rounded-3xl">
-          <h2 className="text-3xl font-bold mb-4">Ready to Transform Your Business?</h2>
+        <div  data-aos="fade-up"
+          data-aos-duration="900"
+          data-aos-delay="200" 
+          
+          className="mt-20 text-center bg-[#447ab1] text-white py-16 px-4 rounded-3xl">
+          <h2 className="text-3xl font-bold mb-4">
+            Ready to Transform Your Business?
+          </h2>
           <p className="text-lg opacity-90 mb-8 max-w-2xl mx-auto">
-            Let's discuss how our solutions can drive growth and efficiency in your organization
+            Let's discuss how our solutions can drive growth and efficiency in
+            your organization
           </p>
           <a
             href="/contact"
@@ -122,7 +160,7 @@ export default function BusinessImpact() {
         </div>
       </div>
     </div>
-  )
+  );
 }
 
 function MetricCard({ number, label }) {
@@ -131,13 +169,25 @@ function MetricCard({ number, label }) {
       <div className="text-3xl font-bold text-[#447ab1] mb-2">{number}</div>
       <div className="text-sm text-gray-600">{label}</div>
     </Card>
-  )
+  );
 }
 
-function BenefitSection({ icon, title, description, metrics, imageSrc, imageAlt, reversed = false }) {
+function BenefitSection({
+  icon,
+  title,
+  description,
+  metrics,
+  imageSrc,
+  imageAlt,
+  reversed = false,
+}) {
   return (
-    <div className={`grid md:grid-cols-2 gap-12 items-center ${reversed ? 'direction-rtl' : ''}`}>
-      <div className={`space-y-6 ${reversed ? 'md:order-2' : ''}`}>
+    <div
+      className={`grid md:grid-cols-2 gap-12 items-center ${
+        reversed ? "direction-rtl" : ""
+      }`}
+    >
+      <div className={`space-y-6 ${reversed ? "md:order-2" : ""}`}>
         <div className="inline-flex items-center justify-center w-16 h-16 rounded-2xl bg-[#447ab1]/10">
           {icon}
         </div>
@@ -146,13 +196,15 @@ function BenefitSection({ icon, title, description, metrics, imageSrc, imageAlt,
         <div className="grid grid-cols-3 gap-4">
           {metrics.map((metric, index) => (
             <div key={index} className="text-center">
-              <div className="text-2xl font-bold text-[#447ab1]">{metric.value}</div>
+              <div className="text-2xl font-bold text-[#447ab1]">
+                {metric.value}
+              </div>
               <div className="text-sm text-gray-600">{metric.label}</div>
             </div>
           ))}
         </div>
       </div>
-      <div className={`${reversed ? 'md:order-1' : ''}`}>
+      <div className={`${reversed ? "md:order-1" : ""}`}>
         <div className="rounded-3xl overflow-hidden shadow-lg hover:shadow-xl transition-shadow">
           <img
             src={imageSrc}
@@ -162,6 +214,5 @@ function BenefitSection({ icon, title, description, metrics, imageSrc, imageAlt,
         </div>
       </div>
     </div>
-  )
+  );
 }
-
