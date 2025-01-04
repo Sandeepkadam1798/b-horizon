@@ -94,14 +94,16 @@ export default function AnimatedHero() {
             transition={{ duration: 0.5 }}
             className="relative"
           >
-            <div style={{borderRadius : "25% 75% / 50%"}} className="relative h-[500px] overflow-hidden rounded-[48px] bg-white/50 backdrop-blur-sm shadow-xl">
+            <div style={{
+    borderRadius: '63% 37% 23% 77% / 35% 43% 57% 65% '}} className="relative h-[500px] overflow-hidden  bg-white/50 backdrop-blur-xl shadow-xl">
               <Image
                 src={heroContent[currentSlide].image}
                 alt={`Slide ${currentSlide + 1}`}
                 fill
                 className="object-fill"
                 priority
-                style={{borderRadius : "25% 75% / 50%"}}
+                style={{
+                  borderRadius: '63% 37% 23% 77% / 35% 43% 57% 65% '}}
               />
             </div>
             {/* Decorative circle */}

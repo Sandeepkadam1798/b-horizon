@@ -1,5 +1,7 @@
 
 
+
+
 'use client'
 import { Button } from "@/components/ui/button"
 import ITApplicationDevelopments from  "../../../public/Images/ITApplicationDevelopment.png"
@@ -18,7 +20,7 @@ import "aos/dist/aos.css";
 import { FaCode, FaRobot, FaMapMarkedAlt, FaDatabase, FaGlobe } from 'react-icons/fa';
 import { useEffect } from "react";
 
-export default function ITApplicationDevelopment() {
+export default function ITEnabledServices() {
 
     const steps = [
         {
@@ -37,24 +39,31 @@ export default function ITApplicationDevelopment() {
 
       const models = [
         {
-          title: "Agile Methodology for Flexibility",
+          title: "24/7 Availability and Proactive IT Support",
           description:
-            "We follow an adaptive, iterative process that ensures flexibility and responsiveness. Agile allows us to prioritize your evolving requirements while maintaining a strong focus on deliverables.",
-          icon: "🔄", // Symbolizing iteration and agility
+            "Round-the-clock monitoring and support to ensure uninterrupted business operations.",
+          icon: "⏰", // Represents time and continuous availability
         },
         {
-          title: "Cloud, AI, and Database Technologies for Efficiency",
+          title: "Continuous Vulnerability Assessments",
           description:
-            "Leveraging cutting-edge cloud solutions, artificial intelligence, and robust database frameworks, we ensure scalable, secure, and high-performing applications tailored to your business needs.",
-          icon: "☁️", // Representing cloud technologies
+            "Identify and mitigate potential risks before they become threats.",
+          icon: "🛡️", // Represents protection and security
         },
         {
-          title: "Close Collaboration with Your Team Throughout the Lifecycle",
+          title: "End-to-End Infrastructure Setup",
           description:
-            "We engage closely with your team from planning to deployment, ensuring seamless communication and transparency. Your feedback drives every step of the lifecycle for optimal results.",
-          icon: "🤝", // Symbolizing teamwork and collaboration
+            "From hardware to networking, we design and implement systems for peak efficiency.",
+          icon: "🖧", // Represents network and infrastructure setup
+        },
+        {
+          title: "Seamless IT Operations",
+          description:
+            "Proactive maintenance and monitoring to minimize downtime and ensure business continuity.",
+          icon: "🔧", // Represents maintenance and smooth operations
         },
       ];
+      
       
   useEffect(() => {
     AOS.init();
@@ -63,26 +72,32 @@ export default function ITApplicationDevelopment() {
 const services = [
   {
     icon: FaCode,
-    title: "Custom software and application design",
-    description: "We create scalable, secure, and high-performance IT applications tailored to your business needs.",
+    title: "Cybersecurity Solutions",
+    description: "Protect your business data with proactive security measures, including vulnerability assessments and endpoint protection.",
     sentence: "Our IT solutions optimize business workflows and enhance user engagement.",
     href: "/Contactus",
   },
   {
     icon: FaRobot,
-    title: "Scalable, Secure Architectures",
-    description: "Empowering your business with intelligent systems, predictive models, and data-driven insights.",
+    title: "Application Support and Maintenance (AMC)",
+    description: "Ensure seamless IT operations with continuous support and proactive maintenance.",
     sentence: "Leverage AI and ML to drive growth and innovation in your business.",
     href: "/Contactus",
     color: "from-green-500 to-green-600",
   },
   {
     icon: FaMapMarkedAlt,
-    title: "Seamless system integration",
-    description: "We offer geospatial development solutions that harness the power of location-based data.",
+    title: "Hardware and Networking Solutions",
+    description: "Access end-to-end infrastructure solutions for optimal performance and reliability.",
     sentence: "Transform geographical data into actionable insights for smarter decision-making.",
     href: "/Contactus",
     color: "from-yellow-500 to-yellow-600",
+  }, {
+    icon: FaCode,
+    title: "IT Infrastructure Design and Setup",
+    description: "Protect your business data with proactive security measures, including vulnerability assessments and endpoint protection.",
+    sentence: "Build a robust, scalable, and efficient IT environment tailored to your business needs",
+    href: "/Contactus",
   },
   
 ];
@@ -93,22 +108,25 @@ const services = [
 
     <>
 
-<div className="bg-gradient-to-r from-[#1a0b2e]/90 to-purple-900 text-white py-20">
+<div className="bg-gradient-to-r from-[#1a0b2e]/90 to-blue-900 text-white py-20">
       <div className="container mx-auto flex flex-col-reverse lg:flex-row items-center px-4 lg:px-20">
         {/* Left Content */}
         <div className="lg:w-1/2 text-center lg:text-left space-y-6">
           <h1 className="text-4xl font-bold" data-aos="fade-right"
           data-aos-duration="900"
           data-aos-delay="200">
-          IT Application Development
+         IT-Enabled Services (ITES)
+
           </h1>
           <p className="text-sm" data-aos="fade-right"
           data-aos-duration="900"
           data-aos-delay="300">
-          {`  At SoluLab - a renowned blockchain development company, we empower
-            enterprises with personalized blockchain development services.
-            Position your business for the future with robust and secure
-            blockchain implementations crafted by our industry-leading experts.`}
+          {`  Comprehensive IT-Enabled Services to Power Your
+Business
+Secure, Seamless, and Scalable IT Solutions for Modern Enterprises
+Empower your business with cutting-edge IT services, from cybersecurity to IT infrastructure
+design. We ensure your operations run smoothly, securely, and without disruption, so you can
+focus on growing your business.`}
           </p>
           <button data-aos="fade-left"
           data-aos-duration="900"

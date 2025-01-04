@@ -8,7 +8,7 @@ import {
   BarChart,
 } from "lucide-react";
 import { Card } from "@/components/ui/card";
-import Service1BusinessImpactROI from "@/public/Images/Service1BusinessImpactROI.png";
+import AIROI from "@/public/Images/AIROI.png";
 import Image from "next/image";
 import AOS from "aos";
 import "aos/dist/aos.css"; 
@@ -48,10 +48,10 @@ export default function BusinessImpact() {
           data-aos-duration="900"
           data-aos-delay="200" >
     <Image
-      src={Service1BusinessImpactROI}
+      src={AIROI}
       alt="Service1BusinessImpactROI"
       className="rounded-lg "
-      width={800} // Adjust to a maximum desired width
+      width={700} // Adjust to a maximum desired width
       height={450} // Maintain aspect ratio
       layout="intrinsic" // Use intrinsic for automatic responsiveness
       priority // Prioritize loading this image
@@ -59,83 +59,6 @@ export default function BusinessImpact() {
   </div>
 </div>
 
-
-        {/* <div className="text-center max-w-3xl mx-auto pt-16 pb-8">
-            <h1 className="text-4xl font-extrabold tracking-tight text-[#447ab1] sm:text-5xl md:text-6xl mb-6">
-              Business Impact and ROI
-            </h1>
-            <p className="text-xl text-gray-600">
-              Transform your business operations and achieve measurable results with our innovative solutions
-            </p>
-          </div> */}
-
-        {/* Key Metrics */}
-        {/* <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mt-12">
-            <MetricCard number="40%" label="Efficiency Increase" />
-            <MetricCard number="60%" label="Faster Delivery" />
-            <MetricCard number="85%" label="System Integration" />
-            <MetricCard number="45%" label="Cost Reduction" />
-          </div> */}
-
-        {/* Main Benefits Section */}
-        {/* <div className="space-y-20">
-         
-          <BenefitSection
-            icon={<TrendingUp className="h-8 w-8 text-[#447ab1]" />}
-            title="Increased Operational Efficiency"
-            description="Transform your business processes with intelligent automation and optimized workflows"
-            metrics={[
-              { label: "Reduced manual tasks", value: "75%" },
-              { label: "Process automation", value: "40%" },
-              { label: "Productivity boost", value: "60%" },
-            ]}
-            imageSrc="/placeholder.svg?height=400&width=600"
-            imageAlt="Operational Efficiency Visualization"
-          />
-
-          
-          <BenefitSection
-            icon={<Rocket className="h-8 w-8 text-[#447ab1]" />}
-            title="Reduced Time-to-Market"
-            description="Accelerate your development cycles and deploy new features faster than ever"
-            metrics={[
-              { label: "Faster deployment", value: "3x" },
-              { label: "Development speed", value: "60%" },
-              { label: "Release frequency", value: "2x" },
-            ]}
-            imageSrc="/placeholder.svg?height=400&width=600"
-            imageAlt="Time to Market Visualization"
-            reversed
-          />
-
-         
-          <BenefitSection
-            icon={<Network className="h-8 w-8 text-[#447ab1]" />}
-            title="Improved System Integration"
-            description="Seamlessly connect your systems and scale your infrastructure with confidence"
-            metrics={[
-              { label: "System uptime", value: "99.9%" },
-              { label: "API response time", value: "<100ms" },
-              { label: "Data accuracy", value: "99.5%" },
-            ]}
-            imageSrc="/placeholder.svg?height=400&width=600"
-            imageAlt="System Integration Visualization"
-          />
-
-          <BenefitSection
-            icon={<PiggyBank className="h-8 w-8 text-[#447ab1]" />}
-            title="Long-term Cost Savings"
-            description="Achieve significant cost reductions through automation and improved resource allocation"
-            metrics={[
-              { label: "Cost reduction", value: "45%" },
-              { label: "ROI timeline", value: "6 mo" },
-              { label: "Resource savings", value: "50%" },
-            ]}
-            imageSrc="/placeholder.svg?height=400&width=600"
-            imageAlt="Cost Savings Visualization"
-            reversed
-          />
-        </div> */}
 
         {/* CTA Section */}
         <div  data-aos="fade-up"

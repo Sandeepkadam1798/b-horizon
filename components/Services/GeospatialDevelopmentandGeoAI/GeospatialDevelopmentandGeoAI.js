@@ -1,5 +1,7 @@
 
 
+
+
 'use client'
 import { Button } from "@/components/ui/button"
 import ITApplicationDevelopments from  "../../../public/Images/ITApplicationDevelopment.png"
@@ -9,21 +11,22 @@ import IndustriesGrid from "./IndustriesGrid";
 import { motion, AnimatePresence } from 'framer-motion';
 import ServicesBg from "@/public/Images/ServicesBg.png";
 import WhyYouNeedUs from "./WhyYouNeedUs";
-import BusinessImpact from "./BusinessImpact";
+
 import AOS from "aos";
 import round from "@/public/Images/round.png";
 import Service1BusinessImpactROI from "@/public/Images/Service1BusinessImpactROI.png";
 import wave from "@/public/Images/wave.webp";
 import "aos/dist/aos.css"; 
-import { FaCode, FaRobot, FaMapMarkedAlt, FaDatabase, FaGlobe } from 'react-icons/fa';
+import { FaMap, FaBrain, FaLayerGroup, FaLocationArrow } from "react-icons/fa";
 import { useEffect } from "react";
+import BusinessImpact from "./BusinessImpact"
 
-export default function ITApplicationDevelopment() {
+export default function GeospatialDevelopmentandGeoAI() {
 
     const steps = [
         {
           icon: "💻", // Custom software and application design
-          title: "Custom software and application design",
+          title: "Advanced Geospatial Analysis",
         },
         {
           icon: "🔒", // Scalable, secure architectures
@@ -37,55 +40,66 @@ export default function ITApplicationDevelopment() {
 
       const models = [
         {
-          title: "Agile Methodology for Flexibility",
+          title: "Advanced Geospatial Analysis",
           description:
-            "We follow an adaptive, iterative process that ensures flexibility and responsiveness. Agile allows us to prioritize your evolving requirements while maintaining a strong focus on deliverables.",
-          icon: "🔄", // Symbolizing iteration and agility
+            "We utilize AI-powered geospatial tools to process, analyze, and visualize data in real time.",
+          icon: "🌍", // Represents geospatial and global analysis
         },
         {
-          title: "Cloud, AI, and Database Technologies for Efficiency",
+          title: "Integration with Enterprise Systems",
           description:
-            "Leveraging cutting-edge cloud solutions, artificial intelligence, and robust database frameworks, we ensure scalable, secure, and high-performing applications tailored to your business needs.",
-          icon: "☁️", // Representing cloud technologies
+            "Our team ensures your geospatial data seamlessly integrates with mapping tools, spatial analysis platforms, and other business systems.",
+          icon: "🔗", // Represents integration and connection
         },
         {
-          title: "Close Collaboration with Your Team Throughout the Lifecycle",
+          title: "Scalable Solutions",
           description:
-            "We engage closely with your team from planning to deployment, ensuring seamless communication and transparency. Your feedback drives every step of the lifecycle for optimal results.",
-          icon: "🤝", // Symbolizing teamwork and collaboration
+            "From mapping and urban planning to autonomous systems, we deliver scalable solutions that grow with your needs.",
+          icon: "📈", // Represents growth and scalability
         },
       ];
+      
       
   useEffect(() => {
     AOS.init();
   }, []);
       
-const services = [
-  {
-    icon: FaCode,
-    title: "Custom software and application design",
-    description: "We create scalable, secure, and high-performance IT applications tailored to your business needs.",
-    sentence: "Our IT solutions optimize business workflows and enhance user engagement.",
-    href: "/Contactus",
-  },
-  {
-    icon: FaRobot,
-    title: "Scalable, Secure Architectures",
-    description: "Empowering your business with intelligent systems, predictive models, and data-driven insights.",
-    sentence: "Leverage AI and ML to drive growth and innovation in your business.",
-    href: "/Contactus",
-    color: "from-green-500 to-green-600",
-  },
-  {
-    icon: FaMapMarkedAlt,
-    title: "Seamless system integration",
-    description: "We offer geospatial development solutions that harness the power of location-based data.",
-    sentence: "Transform geographical data into actionable insights for smarter decision-making.",
-    href: "/Contactus",
-    color: "from-yellow-500 to-yellow-600",
-  },
+  const services = [
+    {
+      icon: FaMap,
+      title: "GIS-Based Application Development",
+      description: "Build robust, scalable GIS applications to manage and analyze geospatial data effectively.",
+      sentence: "Our IT solutions optimize business workflows and enhance user engagement.",
+      href: "/Contactus",
+      color: "from-blue-500 to-blue-600", // Added color gradient for visual appeal
+    },
+    {
+      icon: FaBrain,
+      title: "Advanced Geospatial Analysis Using AI",
+      description: "Combine artificial intelligence with geospatial technologies to uncover patterns and opportunities hidden in your data.",
+      sentence: "Leverage AI and ML to drive growth and innovation in your business.",
+      href: "/Contactus",
+      color: "from-green-500 to-green-600",
+    },
+    {
+      icon: FaLayerGroup,
+      title: "Geospatial Data Integration with Enterprise Systems",
+      description: "Seamlessly integrate geospatial data with existing systems to streamline workflows and improve efficiency.",
+      sentence: "Transform geographical data into actionable insights for smarter decision-making.",
+      href: "/Contactus",
+      color: "from-yellow-500 to-yellow-600",
+    },
+    {
+      icon: FaLocationArrow,
+      title: "Location-Based Decision-Making Solutions",
+      description: "Develop location intelligence tools to support critical decisions with real-time insights.",
+      sentence: "Empower your business with actionable geospatial insights for smarter decision-making.",
+      href: "/Contactus",
+      color: "from-orange-500 to-orange-600", // Slight variation in color to differentiate this service
+    },
+  ];
   
-];
+
 
 
       
@@ -93,22 +107,24 @@ const services = [
 
     <>
 
-<div className="bg-gradient-to-r from-[#1a0b2e]/90 to-purple-900 text-white py-20">
+<div className="bg-gradient-to-r from-[#1a0b2e]/90 to-blue-900 text-white py-20">
       <div className="container mx-auto flex flex-col-reverse lg:flex-row items-center px-4 lg:px-20">
         {/* Left Content */}
         <div className="lg:w-1/2 text-center lg:text-left space-y-6">
           <h1 className="text-4xl font-bold" data-aos="fade-right"
           data-aos-duration="900"
           data-aos-delay="200">
-          IT Application Development
+         Harness the Power of Geospatial Development and GeoAI
+
           </h1>
           <p className="text-sm" data-aos="fade-right"
           data-aos-duration="900"
           data-aos-delay="300">
-          {`  At SoluLab - a renowned blockchain development company, we empower
-            enterprises with personalized blockchain development services.
-            Position your business for the future with robust and secure
-            blockchain implementations crafted by our industry-leading experts.`}
+          {`  Transform location-based data into actionable insights.
+Leverage cutting-edge geospatial technologies and AI-driven solutions to optimize urban
+planning, streamline logistics, and enhance decision-making processes. Whether you need
+GIS-based applications, advanced spatial analysis, or seamless integration with enterprise
+systems, our expertise ensures your success.`}
           </p>
           <button data-aos="fade-left"
           data-aos-duration="900"

@@ -8,7 +8,7 @@ import {
   BarChart,
 } from "lucide-react";
 import { Card } from "@/components/ui/card";
-import Service1BusinessImpactROI from "@/public/Images/Service1BusinessImpactROI.png";
+import GeoAIROI from "@/public/Images/GeoAIROI.png";
 import Image from "next/image";
 import AOS from "aos";
 import "aos/dist/aos.css"; 
@@ -48,7 +48,7 @@ export default function BusinessImpact() {
           data-aos-duration="900"
           data-aos-delay="200" >
     <Image
-      src={Service1BusinessImpactROI}
+      src={GeoAIROI}
       alt="Service1BusinessImpactROI"
       className="rounded-lg "
       width={800} // Adjust to a maximum desired width
