@@ -151,7 +151,7 @@ const navItems = [
   { label: 'About Us', href: '/about' },
   { 
     label: 'Services', 
-    href: '/services',
+    href: '/allservices',
     items: [
       { label: 'IT Application Development', href: '/Services/ITApplicationDevelopment' },
       { label: 'AI, Machine Learning, and Data Science', href: '/Services/AI-MachineLearning&DataScience' },
