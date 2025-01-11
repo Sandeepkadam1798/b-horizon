@@ -80,9 +80,9 @@ function DottedLine({ delay, inView }) {
 export default function AnimatedUIloader() {
   const stats = [
     { number: 16, label: "Our Technologies" },
-    { number: 100, label: "Happy Clients" },
+    { number: 10, label: "Happy Clients" },
     { number: 10, label: "In the market" },
-    { number: 5, label: "Successful projects" },
+    { number: 10, label: "Successful projects" },
   ];
 
   // Track component visibility
