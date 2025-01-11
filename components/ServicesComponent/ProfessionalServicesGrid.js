@@ -115,6 +115,29 @@ const services = [
     href: "/services/it-enabled-services",
     color: "from-purple-500 to-purple-600",
   },
+  {
+    icon: FaCode,
+    title: "IT Infrastructure, Networking & Continuity",
+    description: "It Infrastructure Setup & Management ,Natworking Solution ,Data Backup & Digital Transformation Services",
+    sentence: "It Infrastructure Setup & Management ,Natworking Solution ,Data Backup & Digital Transformation Services ",
+    href: "/Services/ITApplicationDevelopment",
+  },
+  {
+    icon: FaRobot,
+    title: "Cybersecurity and IT Governance",
+    description: "Cybersecurity Solutions ,It Audit and Compliance services & It Risk and Governance Consulting",
+    sentence: "Leverage AI and ML to drive growth and innovation in your business.",
+    href: "/services/ai-machine-learning",
+    color: "from-green-500 to-green-600",
+  },
+  {
+    icon: FaGlobe,
+    title: "Business Intelligence and Business Analytics",
+    description: "Business Intelligence  and Business Analytics",
+    sentence: "Optimize your business operations with our secure and scalable IT solutions.",
+    href: "/services/it-enabled-services",
+    color: "from-purple-500 to-purple-600",
+  },
 ];
 
 export default function ProfessionalServicesGrid() {
@@ -126,81 +149,7 @@ export default function ProfessionalServicesGrid() {
 
   return (
     <>
-      {/* <section className="mt-5 relative overflow-hidden">
-        <Image
-          src={round}
-           alt="ServicesBg"
-          className="absolute top-[20%] w-[550px] -right-[10%] z-0 animate-spin-slow"
-        />
-        <div className="mx-auto lg:py-12 py-8">
-          <div className="flex lg:flex-row gap-4 justify-around flex-col lg:mx-20">
-            <div className="bg-dot-pattern">
-              <Image
-                src={ServicesBg}
-                alt="ServicesBg"
-                data-aos="flip-left"
-                className="lg:w-[915px] p-4"
-              />
-            </div>
-            <div className="pt-12 md:pt-0 relative mx-4">
-              <h2
-                data-aos="fade-left"
-                data-aos-duration="900"
-                data-aos-delay="200"
-                className="text-4xl font-semibold"
-              >
-                GET A TECHNOLOGY
-              </h2>
-              <h3
-                data-aos="fade-left"
-                data-aos-duration="900"
-                data-aos-delay="300"
-                className="text-3xl font-medium"
-              >
-                Our Services
-              </h3>
-              <p
-                data-aos="fade-left"
-                data-aos-duration="900"
-                data-aos-delay="400"
-                className="text-base leading-relaxed"
-              >
-                From software development and digital transformation to consulting and support, we empower organizations to thrive in the digital era and achieve their strategic objectives.
-              </p>
-              <div className="grid md:grid-cols-2 gap-4 mt-4">
-                {services.map((service, index) => (
-                  <motion.div
-                    key={index}
-                    className="p-4"
-                    data-aos="fade-up"
-                    data-aos-duration="1100"
-                    data-aos-delay={200 + index * 200}
-                  >
-                    <div className="bg-white shadow-md rounded-lg p-4 hover:shadow-xl">
-                      <div className="flex items-center">
-                        <div className="w-16 h-16 mr-4">
-                          <service.icon className="h-8 w-8" />
-                        </div>
-                        <div>
-                          <h4 className="text-lg font-semibold">{service.title}</h4>
-                          <p className="text-sm text-gray-600">{service.description}</p>
-                          <p className="text-sm text-gray-500 mt-2">{service.sentence}</p>
-                          <Link
-                            href={service.href}
-                            className="mt-3 inline-block text-blue-600 hover:underline"
-                          >
-                            Learn more
-                          </Link>
-                        </div>
-                      </div>
-                    </div>
-                  </motion.div>
-                ))}
-              </div>
-            </div>
-          </div>
-        </div>
-      </section> */}
+  
          <section className="mt-5 relative overflow-hidden  mx-auto px-4">
   <Image
   alt="Person"

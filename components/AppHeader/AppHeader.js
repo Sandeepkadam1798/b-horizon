@@ -157,7 +157,10 @@ const navItems = [
       { label: 'AI, Machine Learning, and Data Science', href: '/Services/AI-MachineLearning&DataScience' },
       { label: 'Geospatial Development and GeoAI', href: '/Services/GeospatialDevelopmentandGeoAI' },
       { label: 'Database Development and Custom Report Generation', href: '/Services/DatabaseDevelopment ' },
-      { label: 'IT-Enabled Services (ITES)', href: '/Services/IT-EnabledServices' }
+      { label: 'IT-Enabled Services (ITES)', href: '/Services/IT-EnabledServices' },
+      { label: 'Business Intelligence and Business Analytics', href: '/Services/IT-EnabledServices' },
+      { label: 'Cybersecurity and IT Governance', href: '/Services/IT-EnabledServices' },
+      { label: 'IT Infrastructure, Networking & Continuity', href: '/Services/IT-EnabledServices' },
     ] 
   },
  
