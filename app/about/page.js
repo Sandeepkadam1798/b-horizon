@@ -1,3 +1,4 @@
+'use client'
 import AboutSection from '@/components/AboutSection/AboutSection'
 import React from 'react'
 import { ChevronRight } from "lucide-react";
@@ -5,6 +6,8 @@ import Image from "next/image";
 import Link from "next/link";
 import AboutusHero from "../../public/Images/AboutusHero.jpg"
 import wave from "@/public/Images/wave.webp";
+import AnimatedUIloader from '@/components/AnimatedUIloader/AnimatedUIloader';
+import ServicesSection from '@/components/ServicesComponent/ServiceSection';
 
 const page = () => {
   return (
@@ -45,8 +48,15 @@ const page = () => {
         </h1>
       </div>
     </div>
+
         
         <AboutSection/></div>
+        <div>
+        <AnimatedUIloader/>
+      </div>
+      <div>
+        <ServicesSection/>
+      </div>
     {/* <Image src={wave} alt='wave' className='w-full relative -z-1 mt-5'/> */}
     </>
     

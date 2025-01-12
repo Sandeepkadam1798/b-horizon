@@ -3,6 +3,8 @@ import OurValue from "./OurValue";
 import Image from "next/image";
 import wave from "@/public/Images/wave.webp";
 import WhyYouNeedUs from "./WhyYouNeedUs";
+import ShineBorder from "@/components/ui/shine-border";
+import Link from "next/link";
 
 const technologiesData = [
   {
@@ -74,9 +76,10 @@ const Page = () => {
             data-aos-duration="900"
           >
             {technologiesData.map((technology, index) => (
-              <div
+              <ShineBorder
                 key={index}
-                className="bg-white border border-[#A9D040] shadow-lg p-6 flex flex-col justify-between w-full"
+                color={["#A07CFE", "#FE8FB5", "#FFBE7B"]}
+                className="bg-white  shadow-lg p-6 flex flex-col justify-between w-full"
               >
                 <div>
                   <h3 className="text-xl font-semibold text-[#002060]">
@@ -86,14 +89,14 @@ const Page = () => {
                     {technology.description}
                   </p>
                 </div>
-                <a href={technology.link} className="mt-6"> {/* Use dynamic link */}
+                <Link href={technology.link} className="mt-6"> {/* Use dynamic link */}
                   <button
-                    className="btn bg-gradient-to-r from-[#A9D040] to-[#00AEEF] text-white py-3 px-6 rounded-md w-full transform transition-transform duration-300 hover:scale-105 hover:brightness-110"
+                    className="btn bg-gradient-to-r from-[#447ab1] to-[#447ab1] text-white py-3 px-6 rounded-md w-full transform transition-transform duration-300 hover:scale-105 hover:brightness-110"
                   >
                     {technology.buttonLabel}
                   </button>
-                </a>
-              </div>
+                </Link>
+              </ShineBorder>
             ))}
           </div>
         </div>

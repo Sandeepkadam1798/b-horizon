@@ -99,13 +99,9 @@ export default function AboutSection() {
 
     </div>
 
-      <div>
-        <AnimatedUIloader/>
-      </div>
+      
 
-      <div>
-        <ServicesSection/>
-      </div>
+      
 
 
 
