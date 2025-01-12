@@ -5,13 +5,56 @@ import Aboutus from "../../public/Images/Aboutus.png";
 import Hero1 from "../../public/Images/Hero1.png";
 import round from "@/public/Images/round.png";
 
+import AnimatedUIloader from "../AnimatedUIloader/AnimatedUIloader";
+import ServicesSection from "../ServicesComponent/ServiceSection";
+
 export default function AboutSection() {
   return (
-    <div className=" relative from-gray-50 to-white py-16 px-6 lg:px-20">
-     {/* bg-gradient-to-b */}
+    <div >
+     
+
+     <div className=" relative from-gray-50 to-white py-16 px-6 lg:px-20">
+      {/* bg-gradient-to-b */}
+
+      <div className="max-w-7xl  mb-10 mx-auto flex flex-col lg:flex-row items-center gap-10">
+        {/* Left Section - Image */}
+       
+
+        {/* Right Section - Text */}
+        <div className="   top-0   w-full lg:w-3/4 text-center lg:text-left">
+          <h1 className="text-4xl font-bold text-[#447ab1] mb-4">
+          Founder&apos;s Profile
+          </h1>
+          <div className="w-20 h-1 bg-[#447ab1] mx-auto lg:mx-0 mb-6"></div>
+          <p className="text-gray-700 leading-relaxed mb-6">
+          {`Beyond Horizon Technology Solutions is an Emirati-founded company committed to delivering cutting-edge, reliable, and scalable technology solutions. Our mission is to empower businesses with innovative tools and strategies, driving growth and fostering sustainable digital transformation. With a highly skilled and diverse team, we deliver impactful solutions tailored to the unique needs of our clients across multiple industries.`}
+          {`Beyond Horizon Technology Solutions is an Emirati-founded company committed to delivering cutting-edge, reliable, and scalable technology solutions. Our mission is to empower businesses with innovative tools and strategies, driving growth and fostering sustainable digital transformation. With a highly skilled and diverse team, we deliver impactful solutions tailored to the unique needs of our clients across multiple industries.`}
+          </p>
+
+          {/* <button className="mt-8 px-6 py-3 bg-[#447ab1] text-white text-sm font-medium rounded-lg shadow-lg hover:bg-blue-700">
+            Learn More
+          </button> */}
+        </div>
+
+
+
+        <div className="relative w-full lg:w-1/2 flex justify-center">        
+          <Image
+            src={Hero1}
+            alt="Person"
+            width={450}
+            height={400}
+            className="relative z-10 "
+          />
+        </div>
+      </div>
+
+
+{/* about mission , value */}
+
       <div className="max-w-7xl mx-auto flex flex-col lg:flex-row items-center gap-10">
         {/* Left Section - Image */}
-        <div className="relative w-full lg:w-1/2 flex justify-center">
+        <div className=" hidden lg:block  relative w-full lg:w-1/2 flex justify-center">
           {/* <div className="absolute w-96 h-96 bg-blue-100 rounded-full -left-10 -top-10"></div> */}
           <Image
           src={round}
@@ -23,7 +66,7 @@ export default function AboutSection() {
             alt="Person"
             width={450}
             // height={400}
-            className="relative z-10 "
+            className="relative z-10   "
           />
         </div>
 
@@ -52,6 +95,20 @@ export default function AboutSection() {
           </button> */}
         </div>
       </div>
+
+
+    </div>
+
+      <div>
+        <AnimatedUIloader/>
+      </div>
+
+      <div>
+        <ServicesSection/>
+      </div>
+
+
+
     </div>
   );
 }
