@@ -5,9 +5,9 @@ import Image from 'next/image';
 import AOS from "aos";
 import "aos/dist/aos.css";
 import { useEffect } from 'react';
+// import { StickyScrollRevealDemo } from '@/components/ServicesComponent/StickyScrollRevealDemo';
 
 export default function WhyYouNeedUs() {
-
 
 
     useEffect(() => {
@@ -16,6 +16,8 @@ export default function WhyYouNeedUs() {
 
   return (
     <>
+
+    <div>
      <Image src={wave} alt='wave' className='w-full relative -z-1 mt-5'/>
     <div className="min-h-screen bg-gradient-to-b from-gray-50 to-white" data-aos="fade-up"
           data-aos-duration="900"
@@ -73,7 +75,20 @@ export default function WhyYouNeedUs() {
           </a>
         </div> */}
       </div>
+
+
     </div>
+
+    {/* why you need us man*/}
+   
+
+      {/* <StickyScrollRevealDemo/> */}
+      
+   
+
+    </div>
+
+
    
     </>
  
