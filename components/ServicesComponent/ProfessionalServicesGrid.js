@@ -75,6 +75,8 @@ import round from "@/public/Images/round.png";
 import { FaCode, FaRobot, FaMapMarkedAlt, FaDatabase, FaGlobe } from 'react-icons/fa';
 import Link from 'next/link';
 
+// import ServicesSection from './ServiceSection';
+
 const services = [
   {
     icon: FaCode,
@@ -204,6 +206,11 @@ export default function ProfessionalServicesGrid() {
         >
           {`From software development and digital transformation to consulting and support, we empower organizations to thrive in the digital era and achieve their strategic objectives.`}
         </p>
+
+          {/* <div>
+            <ServicesSection/>
+          </div> */}
+
         <div className="grid md:grid-cols-2 gap-4 mt-4">
           {services.map((service, index) => (
             <motion.div
@@ -234,6 +241,8 @@ export default function ProfessionalServicesGrid() {
             </motion.div>
           ))}
         </div>
+
+
       </div>
     </div>
   </div>
