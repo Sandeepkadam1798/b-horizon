@@ -54,7 +54,7 @@ export default function AboutSection() {
 
       <div className="max-w-7xl mx-auto flex flex-col lg:flex-row items-center gap-10">
         {/* Left Section - Image */}
-        <div className=" hidden lg:block  relative w-full lg:w-1/2 flex justify-center">
+        <div className="  lg:block  relative w-full lg:w-1/2 flex justify-center">
           {/* <div className="absolute w-96 h-96 bg-blue-100 rounded-full -left-10 -top-10"></div> */}
           <Image
           src={round}
