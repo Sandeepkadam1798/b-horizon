@@ -5,6 +5,7 @@ import Image from 'next/image';
 import AOS from "aos";
 import "aos/dist/aos.css";
 import { useEffect } from 'react';
+import WhyNeed from '@/components/ServicesComponent/WhyNeed';
 // import { StickyScrollRevealDemo } from '@/components/ServicesComponent/StickyScrollRevealDemo';
 
 export default function WhyYouNeedUs() {
@@ -38,7 +39,13 @@ export default function WhyYouNeedUs() {
           </p>
         </header>
 
-        <div className="grid gap-8 md:grid-cols-3">
+        <div>
+            <WhyNeed/>
+
+          </div>
+        
+
+        {/* <div className="grid gap-8 md:grid-cols-3">
           <FeatureCard 
             icon={<Lightbulb className="h-8 w-8 text-indigo-600" />}
             // title="Tailored Solutions"
@@ -47,7 +54,8 @@ export default function WhyYouNeedUs() {
           <FeatureCard 
             icon={<Code className="h-8 w-8 text-indigo-600" />}
             // title="End-to-End Development"
-            description="	End-to-End Solutions: We provide comprehensive services from initial design to deployment and ongoing maintenance, offering a one-stop-shop for all your IT needs. With us, you won’t have to juggle multiple vendors or deal with the complexity of managing several solutions."
+            description=
+            "	End-to-End Solutions: We provide comprehensive services from initial design to deployment and ongoing maintenance, offering a one-stop-shop for all your IT needs. With us, you won’t have to juggle multiple vendors or deal with the complexity of managing several solutions."
           />
           <FeatureCard 
             icon={<TrendingUp className="h-8 w-8 text-indigo-600" />}
@@ -64,7 +72,9 @@ export default function WhyYouNeedUs() {
             // title="End-to-End Development"
             description="		Reliability and Support: Our 24/7 support ensures that you have continuous access to expert help whenever you need it, reducing downtime and enabling you to focus on what matters most—growing your business."
           />
-        </div>
+        </div> */}
+
+
 
         {/* <div className="mt-16 text-center">
           <a
@@ -84,7 +94,7 @@ export default function WhyYouNeedUs() {
 
       {/* <StickyScrollRevealDemo/> */}
       
-   
+        
 
     </div>
 
@@ -94,6 +104,8 @@ export default function WhyYouNeedUs() {
  
   )
 }
+
+
 
 function FeatureCard({ icon, title, description }) {
   return (
