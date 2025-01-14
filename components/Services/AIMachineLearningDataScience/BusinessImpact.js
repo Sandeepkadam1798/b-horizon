@@ -70,11 +70,11 @@ export default function BusinessImpact() {
             Ready to Transform Your Business?
           </h2>
           <p className="text-lg opacity-90 mb-8 max-w-2xl mx-auto">
-            Let's discuss how our solutions can drive growth and efficiency in
+            Let&apos;s discuss how our solutions can drive growth and efficiency in
             your organization
           </p>
           <a
-            href="/contact"
+            href="https://calendly.com/pankajmehra-seoni/30min?back=1&month=2025-01&date=2025-01-15"
             className="inline-flex items-center px-8 py-4 bg-white text-[#447ab1] rounded-full text-lg font-semibold hover:bg-opacity-90 transition-colors group"
           >
             Schedule a Consultation
