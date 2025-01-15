@@ -6,7 +6,7 @@ import AppHeader from "@/components/AppHeader/AppHeader";
 import  HeroSection  from "@/components/HeroSection/HeroSection";
 import Image from "next/image";
 import { MarketingProcess } from '@/components/MarketingProcess/MarketingProcess';
-import AboutSection from '@/components/AboutSection/AboutSection';
+// import AboutSection from '@/components/AboutSection/AboutSection';
 import ProfessionalServicesGrid from '@/components/ServicesComponent/ProfessionalServicesGrid';
 import Whychooseus from '@/components/Whychooseus/Whychooseus';
 import AnimatedUIloader from '@/components/AnimatedUIloader/AnimatedUIloader';
@@ -43,7 +43,7 @@ export default function Home() {
       <ProfessionalServicesGrid/>
       <OurValue/>
       <MarketingProcess/>
-      <AboutSection/>
+      {/* <AboutSection/> */}
       <Whychooseus/>
       <AnimatedUIloader/>
       <Testimonials/>

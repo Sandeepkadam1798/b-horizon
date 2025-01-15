@@ -5,6 +5,7 @@ import { Mail, MapPin, Phone } from "lucide-react";
 import { Select, SelectItem, Textarea, Button ,Input} from "@nextui-org/react";
 
 import ContactdetailsForm from "./ContactdetailsForm";
+import { SignupFormDemo } from "./ContactTry";
 
 export default function ContactForm() {
   return (
@@ -92,7 +93,9 @@ export default function ContactForm() {
             </Button>
           </div> */}
 
-          <ContactdetailsForm/>
+          {/* <ContactdetailsForm/> */}
+          <SignupFormDemo/>
+          
         </div>
       </div>
     </div>
