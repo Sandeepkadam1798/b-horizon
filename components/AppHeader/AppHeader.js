@@ -50,9 +50,21 @@ const navItems = [
 ];
 
 const AppHeader = () => {
+
+
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const [activeDropdown, setActiveDropdown] = useState(null);
   const mobileMenuRef = useRef(null);
+
+  // const [activeDropdown, setActiveDropdown] = useState(null);
+  const [hovering, setHovering] = useState(false);
+
+  useEffect(() => {
+    if (!hovering) {
+      const timer = setTimeout(() => setActiveDropdown(null), 200);
+      return () => clearTimeout(timer);
+    }
+  }, [hovering]);
 
   const handleDropdownClick = (label) => {
     setActiveDropdown((prev) => (prev === label ? null : label));
@@ -100,7 +112,7 @@ const AppHeader = () => {
           </button>
 
           {/* Desktop Navigation */}
-          <div className="hidden md:flex items-center gap-8">
+          {/* <div className="hidden md:flex items-center gap-8">
             {navItems.map((item) => (
               <div
                 key={item.label}
@@ -147,7 +159,172 @@ const AppHeader = () => {
                 )}
               </div>
             ))}
-          </div>
+          </div> */}
+
+
+{/* 2nd one */}
+{/* <div className="hidden md:flex items-center gap-8">
+      {navItems.map((item) => (
+        <div
+          key={item.label}
+          className="relative group"
+          onMouseEnter={() => setActiveDropdown(item.label)}
+          onMouseLeave={() => setActiveDropdown(null)}
+        >
+          <Link
+            href={item.href}
+            className={`flex items-center gap-1 py-2 text-sm font-medium transition-colors duration-200
+              ${activeDropdown === item.label
+                ? "text-blue-600"
+                : "text-gray-600 hover:text-blue-600"
+              }`}
+          >
+            {item.label}
+            {item.items && (
+              <ChevronDown
+                className={`h-4 w-4 transition-transform duration-200 mt-1 ${
+                  activeDropdown === item.label ? "rotate-180" : ""
+                }`}
+              />
+            )}
+          </Link>
+
+          {item.items && activeDropdown === item.label && (
+            <div
+              className="absolute top-full z-10 mt-2 w-[450px] rounded-md bg-white shadow-lg ring-1 ring-black ring-opacity-5 grid grid-cols-2 gap-4 opacity-0 group-hover:opacity-100 group-hover:translate-y-0 transition-all duration-300 ease-out"
+              style={{
+                left: "auto",
+                right: 0,
+              }}
+            >
+              {item.items.map((subItem) => (
+                <Link
+                  key={subItem.label}
+                  href={subItem.href}
+                  className="block px-4 py-2 text-sm text-gray-600 hover:bg-gray-50 hover:text-blue-600 transition-colors duration-200"
+                >
+                  {subItem.label}
+                </Link>
+              ))}
+            </div>
+          )}
+        </div>
+      ))}
+    </div> */}
+
+
+{/* <div className="hidden md:flex items-center gap-8">
+      {navItems.map((item) => (
+        <div
+          key={item.label}
+          className="relative group"
+          onMouseEnter={() => {
+            setActiveDropdown(item.label);
+            setHovering(true);
+          }}
+          onMouseLeave={() => setHovering(false)}
+        >
+          <Link
+            href={item.href}
+            className={`flex items-center gap-1 py-2 text-sm font-medium transition-colors duration-200
+              ${activeDropdown === item.label
+                ? "text-blue-600"
+                : "text-gray-600 hover:text-blue-600"
+              }`}
+          >
+            {item.label}
+            {item.items && (
+              <ChevronDown
+                className={`h-4 w-4 transition-transform duration-200 mt-1 ${
+                  activeDropdown === item.label ? "rotate-180" : ""
+                }`}
+              />
+            )}
+          </Link>
+
+          {item.items && activeDropdown === item.label && (
+            <div
+              className="absolute top-full z-10 mt-2 w-[450px] rounded-md bg-white shadow-lg ring-1 ring-black ring-opacity-5 grid grid-cols-2 gap-4 opacity-0 group-hover:opacity-100 group-hover:translate-y-0 transition-all duration-300 ease-out"
+              style={{
+                left: "auto",
+                right: 0,
+              }}
+              onMouseEnter={() => setHovering(true)}
+              onMouseLeave={() => setHovering(false)}
+            >
+              {item.items.map((subItem) => (
+                <Link
+                  key={subItem.label}
+                  href={subItem.href}
+                  className="block px-4 py-2 text-sm text-gray-600 hover:bg-gray-50 hover:text-blue-600 transition-colors duration-200"
+                >
+                  {subItem.label}
+                </Link>
+              ))}
+            </div>
+          )}
+        </div>
+      ))}
+    </div> */}
+
+
+    {/* 3 */}
+
+    <div className="hidden md:flex items-center gap-8">
+      {navItems.map((item) => (
+        <div
+          key={item.label}
+          className="relative group"
+          onMouseEnter={() => {
+            setActiveDropdown(item.label);
+            setHovering(true);
+          }}
+          onMouseLeave={() => setHovering(false)}
+        >
+          <Link
+            href={item.href}
+            className={`flex items-center gap-1 py-2 text-md font-semibold  transition-colors duration-200
+              ${activeDropdown === item.label
+                ? "text-[#447ab1]"
+                : "text-gray-600 hover:[#447ab1]"
+              }`}
+          >
+            {item.label}
+            {item.items && (
+              <ChevronDown
+                className={`h-4 w-4 transition-transform duration-200 mt-1 ${
+                  activeDropdown === item.label ? "rotate-180" : ""
+                }`}
+              />
+            )}
+          </Link>
+
+          {item.items && activeDropdown === item.label && (
+            <div
+              className="absolute top-full z-10 mt-3  w-[450px] rounded-lg bg-white shadow-lg ring-1 ring-black ring-opacity-5 grid grid-cols-2 gap-4 opacity-0 group-hover:opacity-100 group-hover:translate-y-1 transition-all duration-300 ease-out"
+              style={{
+                left: "auto",
+                right: 0,
+              }}
+              onMouseEnter={() => setHovering(true)}
+              onMouseLeave={() => setHovering(false)}
+            >
+              {item.items.map((subItem) => (
+                <Link
+                  key={subItem.label}
+                  href={subItem.href}
+                  className="block px-4 py-2 text-sm font-medium text-gray-600  hover:text-[#447ab1]   transition-colors duration-200 rounded-md"
+                >
+                  {subItem.label}
+                </Link>
+              ))}
+            </div>
+          )}
+        </div>
+      ))}
+    </div>
+
+
         </div>
 
         {/* Mobile Navigation */}

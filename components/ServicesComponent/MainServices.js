@@ -1,10 +1,21 @@
+// import React from 'react'
+
+// const MainServices = () => {
+//   return (
+//     <div>MainServices</div>
+//   )
+// }
+
+// export default MainServices
+
+
+
 import { FaLaptopCode, FaDatabase, FaCloud, FaShieldAlt, FaNetworkWired, FaChartLine } from 'react-icons/fa';
 import { MdScience, MdBusinessCenter } from 'react-icons/md';
-// import ShineBorder from "@/components/ui/shine-border";
-// import Link from 'next/link';
-import MainServices from './MainServices';
+import ShineBorder from "@/components/ui/shine-border";
+import Link from 'next/link';
 
-const ServicesSection = () => {
+const MainServices = () => {
   const services = [
     {
       icon: <FaLaptopCode className="text-blue-600 text-4xl" />,
@@ -84,20 +95,18 @@ const ServicesSection = () => {
   ];
 
   return (
-    <section className="py-20 ">
+    <section className="">
       <div className="container mx-auto px-4">
-        <h2 className="text-4xl font-bold text-center text-gray-800 mb-12">
-          Our Services
-        </h2>
-
-        <MainServices/>
-        {/* <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div 
+        className=" grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {services.map((service, index) => (
             <ShineBorder
               key={index}
               color={["#A07CFE", "#FE8FB5", "#FFBE7B"]}
               className="bg-white shadow-lg rounded-lg backdrop-blur-md bg-opacity-60 border border-gray-200 p-6 flex flex-col h-[350px]  w-full"
-            >
+           data-aos="fade-up"
+           data-aos-duration="900"
+          >
               <div className="flex items-center justify-center mb-4">
                 {service.icon}
               </div>
@@ -119,12 +128,10 @@ const ServicesSection = () => {
               </div>
             </ShineBorder>
           ))}
-        </div> */}
-
-
+        </div>
       </div>
     </section>
   );
 };
 
-export default ServicesSection;
+export default MainServices;

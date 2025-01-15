@@ -136,7 +136,7 @@ export function MarketingProcess() {
             </div>
             <div className="absolute inset-0 -translate-x-2 -translate-y-2 bg-purple-500 rounded-full"></div>
         </div>
-        <h3 className="font-headline text-xl sm:text-2xl mt-6 sm:mt-10">3. Deploy</h3>
+        <h3 className="font-headline text-xl sm:text-2xl mt-6 sm:mt-10">4. Deploy</h3>
         <p className="leading-relaxed mt-4">Launching the application to the market</p>
     </div>
 

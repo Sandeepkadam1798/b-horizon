@@ -47,7 +47,7 @@ function Footer() {
 
           {/* First Useful Links Column */}
           <div>
-            <h3 className="text-lg font-semibold text-blue-600 mb-4">Useful link</h3>
+            <h3 className="text-lg font-semibold text-blue-600 mb-4">Services</h3>
             <ul className="space-y-2">
               <li>
                 <Link href="/Services/ITApplicationDevelopment" className="text-gray-600 hover:text-blue-600">
