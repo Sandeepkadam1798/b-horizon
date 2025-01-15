@@ -17,7 +17,7 @@ const ContactdetailsForm = () => {
     lastName: "",
     mobileNumber: "",
     email: "",
-    serviceRequired: "",
+
     message: "",
   });
 
@@ -45,7 +45,6 @@ const ContactdetailsForm = () => {
     ).label;
     setFormData({
       ...formData,
-      serviceRequired: selectedLabel,
     });
   };
 
@@ -57,8 +56,7 @@ const ContactdetailsForm = () => {
       !formData.firstName ||
       !formData.lastName ||
       !formData.mobileNumber ||
-      !formData.email ||
-      !formData.serviceRequired
+      !formData.email
     ) {
       toast.error("Please fill out all required fields");
       return;
@@ -82,7 +80,7 @@ const ContactdetailsForm = () => {
         lastName: "",
         mobileNumber: "",
         email: "",
-        serviceRequired: "",
+        // serviceRequired: "",
         message: "",
       });
     };
@@ -99,7 +97,7 @@ const ContactdetailsForm = () => {
 
   return (
     <>
-      <div className="flex flex-col gap-4 justify-start items-start px-3 py-1 w-full ring-1 ring-gray-200 p-4 rounded-md ">
+      <div className="flex flex-col gap-4 justify-start items-start px-3 py-1 w-full ring-1 ring-gray-200 p-4 rounded-md  md:rounded-2xl p-4 md:p-8 shadow-input bg-white dark:bg-black ">
         <div className="flex flex-col w-full justify-start items-start p-2 py-4 gap-4">
           <form className="w-full" onSubmit={handleSubmit}>
             <div className="w-full grid lg:grid-cols-2 grid-cols-1 gap-6 place-content-center justify-between items-start">
@@ -137,7 +135,12 @@ const ContactdetailsForm = () => {
                 //   <FcBusinessman className="text-2xl text-default-400 pointer-events-none flex-shrink-0" />
                 // }
               />
-              <Input
+              
+             
+            </div>
+
+            <div className="  w-full mt-[40px] mb-[40px] mb-4">
+            <Input
                 type="text"
                 name="mobileNumber"
                 variant="bordered"
@@ -154,7 +157,10 @@ const ContactdetailsForm = () => {
                 //   <FcCallback className="text-2xl text-default-400 pointer-events-none flex-shrink-0" />
                 // }
               />
-              <Input
+            </div>
+
+            <div className="w-full mt-4 mb-4">
+            <Input
                 type="text"
                 name="email"
                 variant="bordered"
@@ -170,8 +176,9 @@ const ContactdetailsForm = () => {
                 //   <FcAddressBook className="text-2xl text-default-400 pointer-events-none flex-shrink-0" />
                 // }
               />
+              
             </div>
-            <div className="w-full mt-12">
+            {/* <div className="w-full mt-12">
               <Select
                 name="serviceRequired"
                 label="inquiry"
@@ -188,10 +195,12 @@ const ContactdetailsForm = () => {
                   <SelectItem key={service.key}>{service.label}</SelectItem>
                 ))}
               </Select>
-            </div>
+            </div> */}
+
             <div className="w-full mt-4">
+              
               <Textarea
-                name="message"
+                name="Message"
                 variant="bordered"
                 placeholder="Your message (Optional)"
                 label="Message"
@@ -204,12 +213,15 @@ const ContactdetailsForm = () => {
                 // }
               />
             </div>
-            <div className="w-full flex justify-center items-center mt-4">
+            <div 
+            className="w-full flex justify-center items-center mt-4"
+            >
               <Button
                 type="submit"
                 className="w-60 rounded-full bg-[#132b57] text-white text-center"
               >
-                Submit
+                Submit &rarr;
+                <BottomGradient />
               </Button>
             </div>
           </form>
@@ -219,5 +231,18 @@ const ContactdetailsForm = () => {
     </>
   );
 };
+
+
+
+
+const BottomGradient = () => {
+  return (
+    <>
+      <span className="group-hover/btn:opacity-100 block transition duration-500 opacity-0 absolute h-px w-full -bottom-px inset-x-0 bg-gradient-to-r from-transparent via-cyan-500 to-transparent" />
+      <span className="group-hover/btn:opacity-100 blur-sm block transition duration-500 opacity-0 absolute h-px w-1/2 mx-auto -bottom-px inset-x-10 bg-gradient-to-r from-transparent via-indigo-500 to-transparent" />
+    </>
+  );
+};
+ 
 
 export default ContactdetailsForm;
