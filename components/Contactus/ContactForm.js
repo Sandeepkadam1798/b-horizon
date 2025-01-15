@@ -11,7 +11,7 @@ export default function ContactForm() {
   return (
 
     <div>
-    <div className="bg-gray-100 container mx-auto px-8 py-12">
+    <div className=" container mx-auto px-8 py-12">
       <div className="mx-auto">
       {/* max-w-5xl */}
         <div className="mb-8">
