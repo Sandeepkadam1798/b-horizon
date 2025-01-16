@@ -7,7 +7,8 @@ import 'aos/dist/aos.css';
 import integrity from "@/public/Images/integrity.png"
 import OurValueHero from "@/public/Images/OurValueHero.jpg"
 import round from "@/public/Images/round.png";
-import WhatWeDo from './WhatWeDO';
+import WhatWeDo from './WhatWeDo.js';
+
 
 const OurValue = () => {
   useEffect(() => {
