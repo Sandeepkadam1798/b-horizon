@@ -39,11 +39,12 @@ export default function AnimatedHero() {
   }, [])
 
   return (
-    <div className="relative mx-auto max-w-8xl px-4 py-20 sm:px-6 lg:px-8 overflow-hidden"
+    <div className="relative mx-auto max-w-8xl px-4 py-20 sm:px-6 lg:px-8 overflow-hidden bg-contain bg-no-repeat"
     style={{
       background: 'url("/Images/slider-bg.jpg")',
-      backgroundSize: 'contain',
+      backgroundSize: 'cover',
       backgroundPosition: 'center',
+      backgroundRepeat: 'no-repeat'
     }}>
     <div className="grid items-center gap-12 lg:grid-cols-2 lg:gap-8">
       {/* Text Section */}
@@ -100,7 +101,7 @@ export default function AnimatedHero() {
             className="relative"
           >
             <div style={{
-    borderRadius: '63% 37% 23% 77% / 35% 43% 57% 75% '}} className="relative h-[450px] overflow-hidden  bg-white/50 backdrop-blur-3xl  shadow-xl">
+    borderRadius: '63% 37% 23% 77% / 35% 43% 57% 75% '}} className="relative h-[400px] mt-10 lg:w-[500px] overflow-hidden  bg-white/50 backdrop-blur-3xl  shadow-xl">
               <Image
                 src={heroContent[currentSlide].image}
                 alt={`Slide ${currentSlide + 1}`}
