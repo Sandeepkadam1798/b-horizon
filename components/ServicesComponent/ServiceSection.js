@@ -24,9 +24,9 @@ const ServicesSection = () => {
     },
     {
       icon: <MdBusinessCenter className="text-orange-500 text-4xl" />,
-      title: 'Business Intelligence and Business Analytics',
-      details: ['Business Intelligence', 'Business Analytics'],
-      link: '/services/business-intelligence',
+      title: 'Cloud Computing and IT-Enabled Services (ITES)',
+      details: ['Cloud Computing', 'Business Analytics'],
+      link: '/Services/BusinessIntelligence',
     },
     {
       icon: <FaChartLine className="text-purple-500 text-4xl" />,
@@ -58,7 +58,7 @@ const ServicesSection = () => {
         'Data Backup, Disaster Recovery, and Business Continuity',
         'Digital Transformation Services',
       ],
-      link: '/services/it-infrastructure',
+      link: '/Services/it-infrastructure',
     },
     {
       icon: <FaShieldAlt className="text-yellow-500 text-4xl" />,
@@ -68,7 +68,7 @@ const ServicesSection = () => {
         'IT Audit and Compliance Services',
         'IT Risk and Governance Consulting',
       ],
-      link: '/services/cybersecurity',
+      link: '/Services/cybersecurity',
     },
     {
       icon: <FaCloud className="text-cyan-600 text-4xl" />,

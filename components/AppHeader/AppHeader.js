@@ -33,7 +33,7 @@ const navItems = [
         href: "/Services/IT-EnabledServices",
       },
       {
-        label: "Business Intelligence and Business Analytics",
+        label: "Cloud Computing and IT-Enabled Services (ITES)",
         href: "/Services/BusinessIntelligence",
       },
       {
