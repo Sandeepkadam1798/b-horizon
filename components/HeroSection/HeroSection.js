@@ -39,7 +39,12 @@ export default function AnimatedHero() {
   }, [])
 
   return (
-    <div className="relative mx-auto max-w-7xl px-4 py-20 sm:px-6 lg:px-8 overflow-hidden">
+    <div className="relative mx-auto max-w-8xl px-4 py-20 sm:px-6 lg:px-8 overflow-hidden"
+    style={{
+      background: 'linear-gradient(to right, rgba(224, 247, 250, 0.7), rgba(128, 222, 234, 0.7)), url("/path-to-your-image.png")',
+      backgroundSize: 'cover',
+      backgroundPosition: 'center',
+    }}>
     <div className="grid items-center gap-12 lg:grid-cols-2 lg:gap-8">
       {/* Text Section */}
       <div className="order-1 lg:order-1">
@@ -52,7 +57,7 @@ export default function AnimatedHero() {
             transition={{ duration: 0.5 }}
             className="max-w-xl"
           >
-            <h1 className="mb-6 text-2xl font-bold tracking-tight text-[#447ab1] sm:text-5xl md:text-6xl">
+            <h1 className="mb-6 text-2xl font-bold tracking-tight text-[#447ab1] sm:text-6xl  md:text-6xl">
               {heroContent[currentSlide].title}
             </h1>
             <p className="mb-8 text-lg text-gray-600">
@@ -95,7 +100,7 @@ export default function AnimatedHero() {
             className="relative"
           >
             <div style={{
-    borderRadius: '63% 37% 23% 77% / 35% 43% 57% 65% '}} className="relative h-[500px] overflow-hidden  bg-white/50 backdrop-blur-xl shadow-xl">
+    borderRadius: '63% 37% 23% 77% / 35% 43% 57% 75% '}} className="relative h-[450px] overflow-hidden  bg-white/50 backdrop-blur-3xl  shadow-xl">
               <Image
                 src={heroContent[currentSlide].image}
                 alt={`Slide ${currentSlide + 1}`}
@@ -103,12 +108,14 @@ export default function AnimatedHero() {
                 className="object-fill"
                 priority
                 style={{
-                  borderRadius: '63% 37% 23% 77% / 35% 43% 57% 65% '}}
+                  borderRadius: '63% 37% 23% 77% / 35% 43% 57% 75% '}}
               />
             </div>
             {/* Decorative circle */}
-            <div className="absolute -bottom-4 -left-4 h-24 w-24 rounded-full bg-blue-100/50 backdrop-blur-sm" />
+            {/* <div className="absolute bottom-4 -left-4 h-24 w-24 rounded-full bg-red-300/50 backdrop-blur-sm" /> */}
+            <div className="absolute -bottom-4 -left-4 h-24 w-24 rounded-full bg-red-300/50 backdrop-blur-sm" />
             <div className="absolute -top-4 -right-4 h-16 w-16 rounded-full bg-purple-100/50 backdrop-blur-sm" />
+            {/* <div className="absolute -top-4 left-0 right-4 h-24 z-10 w-24 rounded-full bg-purple-100/50 backdrop-blur-sm" /> */}
           </motion.div>
         </AnimatePresence>
       </div>
