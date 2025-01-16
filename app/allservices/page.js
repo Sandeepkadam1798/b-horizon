@@ -5,6 +5,7 @@ import wave from "@/public/Images/wave.webp";
 import WhyYouNeedUs from "./WhyYouNeedUs";
 import ShineBorder from "@/components/ui/shine-border";
 import Link from "next/link";
+import ServicesSection from "@/components/ServicesComponent/ServiceSection";
 
 const technologiesData = [
   {
@@ -47,9 +48,9 @@ const technologiesData = [
 const Page = () => {
   return (
     <>
-      <section className="overflow-hidden bg-white py-12">
+      {/* <section className="overflow-hidden bg-white py-12">
         <div className="container mx-auto px-4">
-          {/* Header Section */}
+       
           <div className="text-center mb-12">
             <h2
               className="text-3xl font-bold text-[#002060]"
@@ -69,7 +70,7 @@ const Page = () => {
             </p>
           </div>
 
-          {/* Grid Layout for Cards */}
+         
           <div
             className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8"
             data-aos="fade-up"
@@ -90,18 +91,18 @@ const Page = () => {
                   </p>
                 </div>
                 <Link href={technology.link} className="mt-6"> {/* Use dynamic link */}
-                  <button
+                  {/* <button
                     className="btn bg-gradient-to-r from-[#447ab1] to-[#447ab1] text-white py-3 px-6 rounded-md w-full transform transition-transform duration-300 hover:scale-105 hover:brightness-110"
                   >
                     {technology.buttonLabel}
-                  </button>
-                </Link>
-              </ShineBorder>
-            ))}
+                  </button> */}
+                {/* </Link>
+              </ShineBorder> */}
+            {/* ))}
           </div>
         </div>
-      </section>
-
+      </section> */} 
+      <ServicesSection/>
       <WhyYouNeedUs />
       <Image src={wave} alt="wave" className="w-full relative -z-1 mt-5" />
       <OurValue />
