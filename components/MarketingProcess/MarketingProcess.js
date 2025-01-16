@@ -2,7 +2,7 @@
 import React, { useEffect } from 'react';
 import AOS from "aos";
 import "aos/dist/aos.css";
-
+import { FaLightbulb, FaPencilAlt, FaCode, FaRocket } from 'react-icons/fa';
 
 
 export function MarketingProcess() {
@@ -73,14 +73,16 @@ export function MarketingProcess() {
         <div className="relative w-20 h-20 sm:w-28 sm:h-28 lg:w-32 lg:h-32 mx-auto left-2">
             <div
                 className="z-10 relative w-full h-full bg-white rounded-full border border-gray-300 shadow flex items-center justify-center">
-                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth="0.5"
+                {/* <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth="0.5"
                     stroke="currentColor" className="text-gray-500 w-1/2 h-1/2" alt="Import icon">
                     <path strokeLinecap="round" strokeLinejoin="round"
                         d="M12 16.5V9.75m0 0l3 3m-3-3l-3 3M6.75 19.5a4.5 4.5 0 01-1.41-8.775 5.25 5.25 0 0110.233-2.33 3 3 0 013.758 3.848A3.752 3.752 0 0118 19.5H6.75z">
                     </path>
-                </svg>
+                </svg> */}
+                <FaLightbulb className="text-yellow-500 text-6xl" />
             </div>
-            <div className="absolute inset-0 -translate-x-2 -translate-y-2 bg-blue-500 rounded-full"></div>
+            {/* blue-500  */}
+            <div className="absolute inset-0 -translate-x-2 -translate-y-2 bg-yellow-500 rounded-full"></div>
         </div>
         <h3 className="font-headline text-xl sm:text-2xl mt-6 sm:mt-10">1. Ideate</h3>
         <p className="leading-relaxed mt-4">Turn your idea from concept to MVP.</p>
@@ -89,11 +91,12 @@ export function MarketingProcess() {
         <div className="relative w-20 h-20 sm:w-28 sm:h-28 lg:w-32 lg:h-32 mx-auto left-2">
             <div
                 className="z-10 relative w-full h-full bg-white rounded-full border border-gray-300 shadow flex items-center justify-center">
-                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth="0.5"
+                {/* <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth="0.5"
                     stroke="currentColor" className="text-gray-500 w-1/2 h-1/2" alt="Translate icon">
                     <path strokeLinecap="round" strokeLinejoin="round"
                         d="M7.5 21L3 16.5m0 0L7.5 12M3 16.5h13.5m0-13.5L21 7.5m0 0L16.5 12M21 7.5H7.5"></path>
-                </svg>
+                </svg> */}
+                <FaPencilAlt className="text-blue-500 text-6xl" />
             </div>
             <div className="absolute inset-0 -translate-x-2 -translate-y-2 bg-blue-500 rounded-full"></div>
         </div>
@@ -104,14 +107,16 @@ export function MarketingProcess() {
         <div className="relative w-20 h-20 sm:w-28 sm:h-28 lg:w-32 lg:h-32 mx-auto left-2">
             <div
                 className="z-10 relative w-full h-full bg-white rounded-full border border-gray-300 shadow flex items-center justify-center">
-                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth=".5"
+                {/* <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth=".5"
                     stroke="currentColor" className="text-gray-500 w-1/2 h-1/2" alt="Export icon">
                     <path strokeLinecap="round" strokeLinejoin="round"
                         d="M12 9.75v6.75m0 0l-3-3m3 3l3-3m-8.25 6a4.5 4.5 0 01-1.41-8.775 5.25 5.25 0 0110.233-2.33 3 3 0 013.758 3.848A3.752 3.752 0 0118 19.5H6.75z">
                     </path>
-                </svg>
+                </svg> */}
+
+                <FaCode className="text-green-500 text-6xl" />
             </div>
-            <div className="absolute inset-0 -translate-x-2 -translate-y-2 bg-blue-500 rounded-full"></div>
+            <div className="absolute inset-0 -translate-x-2 -translate-y-2 bg-green-500 rounded-full"></div>
         </div>
         <h3 className="font-headline text-xl sm:text-2xl mt-6 sm:mt-10">3. Develop</h3>
         <p className="leading-relaxed mt-4">Convert the designs into a live application.</p>
@@ -121,16 +126,17 @@ export function MarketingProcess() {
         <div className="relative w-20 h-20 sm:w-28 sm:h-28 lg:w-32 lg:h-32 mx-auto left-2">
             <div
                 className="z-10 relative w-full h-full bg-white rounded-full border border-gray-300 shadow flex items-center justify-center">
-                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth=".5"
+                {/* <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth=".5"
                     stroke="currentColor" className="text-gray-500 w-1/2 h-1/2" alt="Export icon">
                     <path strokeLinecap="round" strokeLinejoin="round"
                         d="M12 9.75v6.75m0 0l-3-3m3 3l3-3m-8.25 6a4.5 4.5 0 01-1.41-8.775 5.25 5.25 0 0110.233-2.33 3 3 0 013.758 3.848A3.752 3.752 0 0118 19.5H6.75z">
                     </path>
-                </svg>
+                </svg> */}
+                <FaRocket className="text-purple-500 text-6xl" />
             </div>
-            <div className="absolute inset-0 -translate-x-2 -translate-y-2 bg-blue-500 rounded-full"></div>
+            <div className="absolute inset-0 -translate-x-2 -translate-y-2 bg-purple-500 rounded-full"></div>
         </div>
-        <h3 className="font-headline text-xl sm:text-2xl mt-6 sm:mt-10">3. Deploy</h3>
+        <h3 className="font-headline text-xl sm:text-2xl mt-6 sm:mt-10">4. Deploy</h3>
         <p className="leading-relaxed mt-4">Launching the application to the market</p>
     </div>
 

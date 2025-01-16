@@ -9,16 +9,19 @@ import { SignupFormDemo } from "./ContactTry";
 
 export default function ContactForm() {
   return (
-    <div className="container mx-auto px-4 py-12">
-      <div className="max-w-5xl mx-auto">
+
+    <div>
+    <div className="container mx-auto px-8 py-12">
+      <div className="mx-auto">
+      {/* max-w-5xl */}
         <div className="mb-8">
           <h1 className="text-4xl font-bold">Have Questions?</h1>
           <h2 className="text-4xl font-bold">Get in touch!</h2>
         </div>
 
-        <div className="grid md:grid-cols-2 gap-8">
+        <div className="grid md:grid-cols-2 lg:gap-0 gap-8">
           {/* Left Column - Company Info */}
-          <div className="bg-[#132b57] text-white p-8 rounded-lg">
+          <div className="bg-[#132b57] lg:w-[90%] w-[90%]  lg:h-[70%]  h-full text-white p-8 rounded-lg">
             <h3 className="text-2xl font-bold mb-4">Company info</h3>
             <p className="mb-8 text-gray-100">
               Ignissimos ducimus qui blanditiis prae
@@ -93,11 +96,14 @@ export default function ContactForm() {
             </Button>
           </div> */}
 
-          {/* <ContactdetailsForm/> */}
-          <SignupFormDemo/>
+          <ContactdetailsForm/>
+          <div className=" w-[100%]" >
+          {/* <SignupFormDemo/> */}
+          </div>
           
         </div>
       </div>
+    </div>
     </div>
   );
 }

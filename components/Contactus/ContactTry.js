@@ -22,23 +22,12 @@ export function SignupFormDemo() {
         message: "",
       });
 
-
-    const services = [
-        { key: "IT Application Development", label: "IT Application Development" },
-        { key: "AI, Machine Learning, and Data Science", label: "AI, Machine Learning, and Data Science" },
-        { key: "Geospatial Development and GeoAI", label: "Geospatial Development and GeoAI" },
-        { key: "IT-Enabled Services (ITES)", label: "IT-Enabled Services (ITES)" },
-        { key: "Database Development and Custom Report Generation", label: "Database Development and Custom Report Generation" },
-        { key: "Other", label: "Other" },
-      ];
-
       const handleChange = (e) => {
         const { name, value } = e.target;
         setFormData({
           ...formData,
           [name]: value,
         });
-
 
       };
 
@@ -110,7 +99,7 @@ export function SignupFormDemo() {
   };
 
   return (
-    <div className="max-w-md w-full mx-auto rounded-none md:rounded-2xl p-4 md:p-8 shadow-input bg-white dark:bg-black">
+    <div className="w-full mx-auto rounded-none md:rounded-2xl p-4 md:p-8 shadow-input bg-white dark:bg-black">
       {/* <h2 className="font-bold text-xl text-neutral-800 dark:text-neutral-200">
         Welcome to Aceternity
       </h2>
