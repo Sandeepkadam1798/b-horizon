@@ -41,8 +41,8 @@ export default function AnimatedHero() {
   return (
     <div className="relative mx-auto max-w-8xl px-4 py-20 sm:px-6 lg:px-8 overflow-hidden"
     style={{
-      background: 'linear-gradient(to right, rgba(224, 247, 250, 0.7), rgba(128, 222, 234, 0.7)), url("/path-to-your-image.png")',
-      backgroundSize: 'cover',
+      background: 'url("/Images/slider-bg.jpg")',
+      backgroundSize: 'contain',
       backgroundPosition: 'center',
     }}>
     <div className="grid items-center gap-12 lg:grid-cols-2 lg:gap-8">
@@ -113,7 +113,7 @@ export default function AnimatedHero() {
             </div>
             {/* Decorative circle */}
             {/* <div className="absolute bottom-4 -left-4 h-24 w-24 rounded-full bg-red-300/50 backdrop-blur-sm" /> */}
-            <div className="absolute -bottom-4 -left-4 h-24 w-24 rounded-full bg-red-300/50 backdrop-blur-sm" />
+            {/* <div className="absolute -bottom-4 -left-4 h-24 w-24 rounded-full bg-red-300/50 backdrop-blur-sm" /> */}
             <div className="absolute -top-4 -right-4 h-16 w-16 rounded-full bg-purple-100/50 backdrop-blur-sm" />
             {/* <div className="absolute -top-4 left-0 right-4 h-24 z-10 w-24 rounded-full bg-purple-100/50 backdrop-blur-sm" /> */}
           </motion.div>
