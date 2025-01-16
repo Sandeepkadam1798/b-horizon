@@ -5,7 +5,7 @@ import { Mail, MapPin, Phone } from "lucide-react";
 import { Select, SelectItem, Textarea, Button ,Input} from "@nextui-org/react";
 
 import ContactdetailsForm from "./ContactdetailsForm";
-import { SignupFormDemo } from "./ContactTry";
+// import { SignupFormDemo } from "./ContactTry";
 
 export default function ContactForm() {
   return (
