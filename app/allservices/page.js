@@ -3,10 +3,11 @@ import OurValue from "./OurValue";
 import Image from "next/image";
 import wave from "@/public/Images/wave.webp";
 import WhyYouNeedUs from "./WhyYouNeedUs";
-import ShineBorder from "@/components/ui/shine-border";
-import Link from "next/link";
-import MainServices from "@/components/ServicesComponent/MainServices";
+// import ShineBorder from "@/components/ui/shine-border";
+// import Link from "next/link";
+// import MainServices from "@/components/ServicesComponent/MainServices";
 import ServicesSection from "@/components/ServicesComponent/ServiceSection";
+
 
 // const technologiesData = [
 //   {
